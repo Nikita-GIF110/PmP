@@ -1,0 +1,140 @@
+@import url("../../style/dist/style.css");
+.wrap {
+  background-color: #f4f4f2;
+}
+
+.carousel-item .block {
+  justify-content: space-between;
+}
+.carousel-item .block-card-img {
+  margin-bottom: 2rem;
+}
+.carousel-item .block-card-img img {
+  max-width: 100%;
+  height: auto;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  align-items: self-start;
+  width: 50px;
+  height: 50px;
+  opacity: 1;
+  z-index: 5;
+  top: -15%;
+}
+
+/*.carousel-control-prev {
+  left: 90%;
+}
+.carousel-control-next {
+  right: 0;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-size: 0;
+}*/
+.mainDescription {
+  background-color: #f4f4f2;
+  padding: 50px 0 0 0;
+}
+.mainDescription_content h2 {
+  font-family: "Cormorant", serif;
+}
+.mainDescription_content p {
+  font-family: "HelveticaNeueCyr-reg";
+  font-size: 14px;
+  color: #333333;
+}
+
+.img {
+  position: relative;
+  padding: 7rem 0 0 0;
+  background-color: #f4f4f2;
+}
+.img img {
+  width: 100vw;
+}
+
+.actionPrinciple {
+  background-color: #f4f4f2;
+  padding: 150px 0;
+}
+.actionPrinciple_content h2 {
+  font-family: "Cormorant", serif;
+  color: #333333;
+  font-size: 36px;
+}
+.actionPrinciple_content p {
+  font-family: "HelveticaNeueCyr-reg";
+  font-size: 14px;
+  color: #333333;
+}
+.actionPrinciple_content_block_card_img img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.actionPrinciple_content_block_card_description h4 {
+  font-family: "HelveticaNeueCyr-bold";
+  font-size: 14px;
+  color: #333333;
+}
+.actionPrinciple_content_block_card_description p {
+  font-family: "HelveticaNeueCyr-reg";
+  font-size: 14px;
+  color: #333333;
+}
+
+.production {
+  background-color: #f4f4f2;
+  padding-bottom: 150px;
+}
+.production_content h2 {
+  font-size: 36px;
+  font-family: "Cormorant", serif;
+  font-weight: 500;
+  color: #333333;
+}
+.production_content_text {
+  margin-bottom: 100px;
+}
+.production_content_text p {
+  font-family: "HelveticaNeueCyr-reg";
+  font-size: 14px;
+  color: #333333;
+}
+.production_content_text h2 {
+  font-family: "Cormorant", serif;
+  font-size: 96px;
+  color: #738793;
+}
+.production_content_text img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.production_content .specialist img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.production_content .specialist_info p {
+  font-family: "HelveticaNeueCyr-reg";
+  font-size: 14px;
+  color: #333333;
+}
+
+.after {
+  background-color: #f4f4f2;
+  padding-bottom: 150px;
+}
+.after_content_top {
+  margin-bottom: 4.5rem;
+}
+.after_content_top h2 {
+  font-size: 36px;
+  font-family: "Cormorant", serif;
+  font-weight: 500;
+  color: #333333;
+}

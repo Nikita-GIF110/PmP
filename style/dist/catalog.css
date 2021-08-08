@@ -1,0 +1,39 @@
+@import url("../../style/dist/style.css");
+@import url("../../style/dist/about.css");
+.mainDescription_content {
+  justify-content: center;
+}
+.mainDescription_content_title {
+  margin-bottom: 4rem;
+}
+.mainDescription_content_filter {
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+.mainDescription_content_filter nav .breadcrumb {
+  margin: 0;
+  justify-content: space-between;
+}
+.mainDescription_content_filter nav .breadcrumb .breadcrumb-item a {
+  font-family: "HelveticaNeueCyr-reg";
+  font-size: 16px;
+  color: #333333;
+  padding-right: 1.5rem;
+  border-right: 1px solid #333333;
+}
+.mainDescription_content_filter nav .breadcrumb .breadcrumb-item.active {
+  font-family: "HelveticaNeueCyr-reg";
+  font-size: 16px;
+  color: #333333;
+}
+.mainDescription_content_filter button {
+  padding: 0.7rem 0;
+  color: #534e60;
+  border: 1px solid #534e60;
+  border-radius: 5px;
+  background-color: transparent;
+}
+.mainDescription_content .cards .catalog_content_block_card {
+  margin-bottom: 2rem;
+}

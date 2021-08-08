@@ -1,0 +1,61 @@
+@import url("../../style/dist/style.css");
+@import url("../../style/dist/about.css");
+
+$backgroundStockInfo: #738793;
+$white: #fff;
+$wordsColor: #333333;
+$ColorButton: #534e60;
+$bacground: #f4f4f2;
+$bacgroundWhite: #e6eae7;
+$grey: #7c7c7c;
+$resultBacground: #e6eae7;
+$borderColor: #9e9e9e;
+$breadcrumbColor: #959595;
+$numberColor: #738793;
+
+//MAINDESCRIPTION
+.mainDescription {
+  &_content {
+    justify-content: center;
+    &_title {
+      margin-bottom: 4rem;
+    }
+    &_filter {
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 5rem;
+      nav {
+        .breadcrumb {
+          margin: 0;
+          justify-content: space-between;
+          .breadcrumb-item {
+            a {
+              font-family: "HelveticaNeueCyr-reg";
+              font-size: 16px;
+              color: $wordsColor;
+              padding-right: 1.5rem;
+              border-right: 1px solid $wordsColor;
+            }
+          }
+          .breadcrumb-item.active {
+            font-family: "HelveticaNeueCyr-reg";
+            font-size: 16px;
+            color: $wordsColor;
+          }
+        }
+      }
+      button {
+        padding: 0.7rem 0;
+        color: $ColorButton;
+        border: 1px solid $ColorButton;
+        border-radius: 5px;
+        background-color: transparent;
+      }
+    }
+    .cards {
+      .catalog_content_block_card {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}

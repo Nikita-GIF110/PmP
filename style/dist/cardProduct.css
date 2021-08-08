@@ -1,0 +1,115 @@
+@import url("../../style/dist/style.css");
+@import url("../../style/dist/about.css");
+.productCard {
+  background-color: #f4f4f2;
+  padding: 0 0 6rem 0;
+}
+.productCard_content .slider {
+  overflow: hidden;
+  position: relative;
+}
+.productCard_content .slider_track {
+  display: flex;
+}
+.productCard_content .slider .slider_button-next,
+.productCard_content .slider .slider_button-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+}
+.productCard_content .slider .slider_button-next {
+  right: 0;
+}
+.productCard_content .slider .slider_button-prev {
+  left: 0;
+}
+.productCard_content .productCard_content_text_top {
+  border-bottom: 1px solid #534e60;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+.productCard_content .productCard_content_text_top h2 {
+  font-size: 36px;
+  font-family: "Cormorant", serif;
+  font-weight: 500;
+  color: #333333;
+  margin-bottom: 1.5rem;
+}
+.productCard_content .productCard_content_text_top p {
+  font-family: "HelveticaNeueCyr-medium";
+  color: #7c7c7c;
+  font-size: 16px;
+}
+.productCard_content .productCard_content_text_item {
+  border-bottom: 1px solid #dadada;
+  padding-bottom: 0.5rem;
+  margin-top: 0.5rem;
+  position: relative;
+  min-height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.productCard_content .productCard_content_text_item h5 {
+  font-family: "HelveticaNeueCyr-medium";
+  color: #333333;
+  font-size: 16px;
+  font-weight: 550;
+}
+.productCard_content .productCard_content_text_item p {
+  font-family: "HelveticaNeueCyr-reg";
+  color: #959595;
+  font-size: 14px;
+}
+.productCard_content .productCard_content_text_item a {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+.productCard_content .productCard_content_text h4 {
+  font-family: "HelveticaNeueCyr-bold";
+  color: #333333;
+  margin-top: 1rem;
+  font-size: 20px;
+}
+.productCard_content .productCard_content_text_group {
+  margin-top: 3rem;
+  display: flex;
+}
+.productCard_content .productCard_content_text_group .num-in {
+  position: relative;
+  margin-right: 1rem;
+  border-radius: 5px;
+  border: 1px solid #534e60;
+  padding: 0.8rem 0.7rem;
+}
+.productCard_content .productCard_content_text_group .num-in input {
+  max-width: 2em;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  text-align: center;
+}
+.productCard_content .productCard_content_text_group .num-in span {
+  cursor: pointer;
+}
+.productCard_content .productCard_content_text_group button {
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  font-family: "HelveticaNeueCyr-medium";
+  background-color: #534e60;
+  padding: 15px 23px;
+}
+.productCard_content .productCard_content_text .add {
+  margin-top: 2.5rem;
+  color: #333333;
+  font-family: "HelveticaNeueCyr-reg";
+  font-size: 14px;
+  border: none;
+  background-color: transparent;
+}
