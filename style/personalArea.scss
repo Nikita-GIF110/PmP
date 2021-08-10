@@ -1,0 +1,384 @@
+@import url("../../style/dist/style.css");
+
+$backgroundStockInfo: #738793;
+$white: #fff;
+$wordsColor: #333333;
+$ColorButton: #534e60;
+$bacground: #f4f4f2;
+$bacgroundWhite: #e6eae7;
+$grey: #7c7c7c;
+$resultBacground: #e6eae7;
+$borderColor: #9e9e9e;
+$breadcrumbColor: #959595;
+$numberColor: #738793;
+
+.personalArea {
+  background-color: $bacground;
+  padding: 50px 0 120px 0;
+  &_content {
+    h2 {
+      font-size: 36px;
+      font-family: "Cormorant", serif;
+      font-weight: 500;
+      color: $wordsColor;
+      margin: 0 0 3rem 0;
+    }
+    &_block {
+      &_item {
+        border-top: 1px solid #dadada;
+        padding: 1rem 0 1rem 0;
+        a {
+          font-size: 16px;
+          font-family: "HelveticaNeueCyr-reg";
+          color: $wordsColor;
+          text-decoration: none;
+          font-weight: 400;
+        }
+        .exitBtn {
+          color: #d71e1e;
+        }
+      }
+      &_item.active a {
+        font-weight: 700;
+      }
+      &_item:last-child {
+        border-bottom: 1px solid #dadada;
+      }
+    }
+    &_info {
+      display: none;
+      h5 {
+        font-family: "HelveticaNeueCyr-medium";
+        font-size: 18px;
+        color: $wordsColor;
+      }
+      button {
+        color: #a3a3a3;
+        font-family: "HelveticaNeueCyr-reg";
+        font-size: 14px;
+        border: none;
+        background-color: transparent;
+        text-align: right;
+      }
+      .passwordBtn {
+        text-align: left;
+      }
+      &_item {
+        position: relative;
+        padding: 0.5rem 0;
+        display: flex;
+        flex-direction: column;
+        //align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid $backgroundStockInfo;
+        input:not(input[type="checkbox"]) {
+          width: 100%;
+          border: none;
+          background-color: transparent;
+          outline: none;
+          color: $numberColor;
+          font-size: 18px;
+          //padding: 0.5rem 0 0.5rem 0;
+          margin: 0.7rem 0 0 0;
+        }
+        label:not(label[for="userNotifications"]) {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          color: $numberColor;
+          transition: 0.1s;
+        }
+        input:focus + label:not(label[for="userNotifications"]) {
+          top: 5%;
+          transform: scale(0.8);
+          transform-origin: left;
+        }
+        input[type="checkbox"] {
+          visibility: hidden;
+        }
+        p:first-child {
+          //position: absolute;
+          left: 0;
+          top: 0;
+          color: $borderColor;
+          font-size: 9px;
+          font-family: "HelveticaNeueCyr-reg";
+        }
+        p {
+          color: $borderColor;
+          font-size: 18px;
+          font-family: "HelveticaNeueCyr-reg";
+          margin: 0;
+        }
+        .removeBtn {
+          visibility: hidden;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 0;
+        }
+      }
+      &_item:hover .removeBtn {
+        visibility: visible;
+      }
+      .wrap-custom-checkbox {
+        position: relative;
+        margin: 1.5rem 0 2rem 0;
+        input[type="checkbox"] {
+          visibility: hidden;
+        }
+        label {
+          //margin-left: 0.5rem;
+          color: $wordsColor;
+          font-size: 14px;
+          font-family: "HelveticaNeueCyr-reg";
+        }
+        label::before {
+          content: "";
+          position: absolute;
+          background-image: url("../../img/icon/checkbox.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+          top: 50%;
+          left: 4px;
+          transform: translateY(-50%);
+          opacity: 0;
+          width: 7px;
+          height: 6px;
+          transition: 0.1s;
+        }
+      }
+      .wrap-custom-checkbox::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 15px;
+        height: 15px;
+        border: 1px solid $breadcrumbColor;
+        border-radius: 3px;
+      }
+      .wrap-custom-checkbox input:checked + label::before {
+        opacity: 1;
+      }
+      &_name {
+        margin-top: 2rem;
+      }
+      &_mail {
+        margin-top: 2rem;
+        margin-bottom: 4.5rem;
+      }
+      &_adress {
+        margin-top: 2rem;
+      }
+    }
+    &_orders {
+      h5 {
+        font-family: "HelveticaNeueCyr-medium";
+        color: $wordsColor;
+        font-size: 18px;
+        margin: 0 0 1.5rem 0;
+      }
+      &_item {
+        border-bottom: 1px solid $backgroundStockInfo;
+        margin-bottom: 1.5rem;
+        &_top {
+          margin-bottom: 1.5rem;
+          h5 {
+            font-family: "HelveticaNeueCyr-medium";
+            color: $wordsColor;
+            font-size: 16px;
+            margin-bottom: 0.1rem;
+          }
+          p {
+            color: #7b7b7b;
+            font-family: "HelveticaNeueCyr-reg";
+            font-size: 14px;
+            margin-bottom: 0;
+          }
+          .button {
+            text-align: right;
+            button {
+              background-color: transparent;
+              border: none;
+              color: #ea4335;
+              font-family: "HelveticaNeueCyr-reg";
+              font-size: 14px;
+            }
+          }
+          .payment {
+            text-align: right;
+            h5 {
+              font-family: "HelveticaNeueCyr-medium";
+              color: $wordsColor;
+              font-size: 18px;
+              margin-bottom: 0.1rem;
+            }
+            p {
+              position: relative;
+              font-family: "HelveticaNeueCyr-medium";
+              color: $wordsColor;
+              font-size: 14px;
+              margin-bottom: 0;
+              span {
+                display: inline-block;
+                margin-right: 1rem;
+                width: 7px;
+                height: 7px;
+                border-radius: 50%;
+              }
+              .goingTo {
+                background-color: #f28a1a;
+              }
+              .expected {
+                background-color: #738793;
+              }
+              .delivered {
+                background-color: #56a75d;
+              }
+            }
+          }
+        }
+        &_description {
+          justify-content: center;
+          &_top {
+            padding: 1rem 0;
+            border-top: 1px solid #dadada;
+            border-bottom: 1px solid #dadada;
+            h5 {
+              font-family: "HelveticaNeueCyr-reg";
+              font-size: 16px;
+              color: $wordsColor;
+              margin-bottom: 0;
+            }
+            .button {
+              text-align: right;
+              a {
+                position: relative;
+                text-decoration: none;
+                font-family: "HelveticaNeueCyr-reg";
+                font-size: 14px;
+                color: $wordsColor;
+                margin-right: 1rem;
+              }
+              a::before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: -1.5rem;
+                transform: translateY(-50%);
+                background-image: url("../../img/icon/personalAreaArrow.svg");
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 8px;
+                height: 4px;
+                transition: 0.3s;
+              }
+            }
+          }
+          &_group {
+            margin-top: 1.5rem;
+            display: none;
+            &_name {
+              h6 {
+                font-family: "HelveticaNeueCyr-reg";
+                font-size: 14px;
+                color: $wordsColor;
+              }
+            }
+            &_amount {
+              p {
+                color: $breadcrumbColor;
+                font-family: "HelveticaNeueCyr-reg";
+                font-size: 14px;
+              }
+            }
+            &_price {
+              h6 {
+                font-family: "HelveticaNeueCyr-medium";
+                font-weight: 550;
+                color: $wordsColor;
+              }
+            }
+          }
+        }
+      }
+      &_item.active {
+        padding-bottom: 1.5rem;
+      }
+      &_item.active .button a::before {
+        transform: rotate(180deg);
+      }
+      &_item.active .personalArea_content_orders_item_description_group {
+        display: block;
+      }
+    }
+    &_catalog {
+      display: none;
+      h5 {
+        color: $wordsColor;
+        font-size: 18px;
+        font-family: "HelveticaNeueCyr-medium";
+        margin-bottom: 3rem;
+      }
+      .catalog_content_block_card {
+        margin-bottom: 2rem;
+        text-decoration: none;
+        position: relative;
+        .favorites {
+          position: absolute;
+          z-index: 5;
+          top: 0.8rem;
+          right: 1.5rem;
+          border: none;
+          background-color: transparent;
+        }
+        &_img {
+          padding: 100px 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: $bacgroundWhite;
+          img {
+            max-width: 100%;
+            height: auto;
+          }
+        }
+        &_description {
+          h4 {
+            font-family: "HelveticaNeueCyr-medium";
+            font-size: 16px;
+            color: $wordsColor;
+            font-weight: 550;
+          }
+          p {
+            font-family: "HelveticaNeueCyr-medium";
+            color: $grey;
+            font-size: 14px;
+          }
+          .price {
+            font-family: "HelveticaNeueCyr-medium";
+            color: $wordsColor;
+            font-size: 18px;
+          }
+          button {
+            background-color: transparent;
+            padding: 16px 0;
+            display: flex;
+            justify-content: center;
+            justify-items: stretch;
+            border: 1px solid $ColorButton;
+            color: $ColorButton;
+            font-size: 14px;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+//font-family: "HelveticaNeueCyr-reg";
+//font-family: "HelveticaNeueCyr-medium";
+//font-family: "HelveticaNeueCyr-bold";
+//font-family: "Cormorant", serif;

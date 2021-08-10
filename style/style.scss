@@ -383,7 +383,7 @@ $breadcrumbColor: #959595;
       &_block {
         display: flex;
         align-items: center;
-        button {
+        a {
           margin-right: 35px;
           border: none;
           outline: none;
@@ -391,8 +391,9 @@ $breadcrumbColor: #959595;
           display: flex;
           justify-content: center;
           align-items: center;
+          text-decoration: none;
         }
-        button:last-child {
+        a:last-child {
           margin-right: 0;
         }
       }
@@ -422,22 +423,25 @@ $breadcrumbColor: #959595;
       display: flex;
       justify-content: center;
       align-items: center;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
     }
     &_description {
       display: flex;
       justify-content: center;
-      align-items: flex-start;
       flex-direction: column;
       h2 {
         font-family: "HelveticaNeueCyr-medium";
         color: $white;
-        font-size: 56px;
+        font-size: calc(30px + 26 * (100vw / 1920));
       }
       p {
         font-family: "HelveticaNeueCyr-medium";
         color: $white;
-        font-size: 24px;
-        margin-bottom: 40px;
+        font-size: calc(18px + 6 * (100vw / 1920));
+        margin-bottom: 2rem;
       }
       a {
         font-family: "HelveticaNeueCyr-medium";
@@ -457,7 +461,7 @@ $breadcrumbColor: #959595;
   background-color: $bacground;
   &_content {
     h2 {
-      font-size: 36px;
+      font-size: calc(26px + 16 * (100vw / 1920));
       font-family: "Cormorant", serif;
       font-weight: 500;
       color: $wordsColor;
@@ -470,16 +474,22 @@ $breadcrumbColor: #959595;
         justify-content: center;
         align-items: center;
       }
+      &_img {
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
       &_name {
         h2 {
           font-family: "HelveticaNeueCyr-reg";
           color: $wordsColor;
-          font-size: 36px;
+          font-size: calc(20px + 16 * (100vw / 1920));
         }
         a {
           border-radius: 5px;
           font-family: "HelveticaNeueCyr-medium";
-          padding: 16px 61px;
+          padding: 0.8rem 3rem;
           background-color: transparent;
           text-decoration: none;
           border: 1px solid $ColorButton;
@@ -494,6 +504,87 @@ $breadcrumbColor: #959595;
   background-color: $bacground;
   padding: 0 0 7rem 0;
   &_content {
+    .slider-wrap {
+      .slider {
+        position: relative;
+        &-btnPrev,
+        &-btnNext {
+          position: absolute;
+          z-index: 5;
+          top: 30%;
+          border: none;
+          background-color: transparent;
+        }
+        &-btnPrev img,
+        &-btnNext img {
+          opacity: 0.5;
+          transition: 0.3s;
+        }
+        &-btnPrev img:hover,
+        &-btnNext img:hover {
+          opacity: 1;
+        }
+        &-btnPrev {
+          left: 0;
+        }
+        &-btnNext {
+          right: 0;
+        }
+        &-track {
+          display: flex;
+          &-item {
+            margin-right: 1.3rem;
+            position: relative;
+            .catalog_content_block_card {
+              text-decoration: none;
+              .favorites {
+                position: absolute;
+                top: 0.8rem;
+                right: 0.8rem;
+                border: none;
+                background-color: transparent;
+              }
+              &_img {
+                padding: 100px 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $bacgroundWhite;
+              }
+              &_description {
+                h4 {
+                  font-family: "HelveticaNeueCyr-medium";
+                  font-size: 16px;
+                  color: $wordsColor;
+                  font-weight: 550;
+                }
+                p {
+                  font-family: "HelveticaNeueCyr-medium";
+                  color: $grey;
+                  font-size: 14px;
+                }
+                .price {
+                  font-family: "HelveticaNeueCyr-medium";
+                  color: $wordsColor;
+                  font-size: 18px;
+                }
+                button {
+                  background-color: transparent;
+                  padding: 16px 0;
+                  display: flex;
+                  justify-content: center;
+                  justify-items: stretch;
+                  border: 1px solid $ColorButton;
+                  color: $ColorButton;
+                  font-size: 14px;
+                  border-radius: 5px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
     &_top {
       h2 {
         font-family: "Cormorant", serif;
@@ -508,81 +599,25 @@ $breadcrumbColor: #959595;
         font-family: "HelveticaNeueCyr-medium";
       }
     }
-    &_block {
-      &_card {
-        position: relative;
-        text-decoration: none;
-        &_img {
-          padding: 100px 0;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          background-color: $bacgroundWhite;
-        }
-        &_description {
-          h4 {
-            font-family: "HelveticaNeueCyr-medium";
-            font-size: 16px;
-            color: $wordsColor;
-            font-weight: 550;
-          }
-          p {
-            font-family: "HelveticaNeueCyr-medium";
-            color: $grey;
-            font-size: 14px;
-          }
-          .price {
-            font-family: "HelveticaNeueCyr-medium";
-            color: $wordsColor;
-            font-size: 18px;
-          }
-          button {
-            background-color: transparent;
-            padding: 16px 0;
-            display: flex;
-            justify-content: center;
-            justify-items: stretch;
-            border: 1px solid $ColorButton;
-            color: $ColorButton;
-            font-size: 14px;
-            border-radius: 5px;
-          }
-        }
-      }
-      &_card::before {
-        content: "";
-        position: absolute;
-        top: 17px;
-        right: 25px;
-        width: 13px;
-        height: 12px;
-        background-image: url("../../img/icon/heart.svg");
-        background-position: center;
-        background-repeat: no-repeat;
-      }
-    }
   }
 }
 //ABOUT
 .about {
   background-color: $bacground;
   position: relative;
-  .adeptivImg {
-    width: 60vw;
-  }
   &_content {
     min-height: 610px;
+    h2 {
+      font-family: "Cormorant", serif;
+      font-weight: 500;
+      font-size: 36px;
+      color: $wordsColor;
+    }
     &_description {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
-      h2 {
-        font-family: "Cormorant", serif;
-        font-weight: 500;
-        font-size: 36px;
-        color: $wordsColor;
-      }
       p {
         font-size: 14px;
         font-family: "HelveticaNeueCyr-medium";
@@ -603,13 +638,11 @@ $breadcrumbColor: #959595;
       display: flex;
       align-items: stretch;
       img {
+        max-width: 100%;
+        height: auto;
         object-fit: cover;
-        width: 50vw;
-        height: 50vh;
         position: absolute;
-        top: 50%;
         right: 0;
-        transform: translateY(-50%);
       }
     }
   }
@@ -622,9 +655,12 @@ $breadcrumbColor: #959595;
   padding: 75px 0 150px 0;
   &_content {
     &_img {
+      display: flex;
+      justify-content: center;
       img {
         max-width: 100%;
         height: auto;
+        object-fit: cover;
       }
     }
     &_description {
@@ -647,7 +683,7 @@ $breadcrumbColor: #959595;
     right: 0;
     bottom: 150px;
     width: 40vw;
-    height: 50vh;
+    height: 60vh;
     object-fit: cover;
   }
 }
@@ -655,12 +691,14 @@ $breadcrumbColor: #959595;
 .result {
   background-color: $resultBacground;
   padding: 90px 0;
+
   &_content {
+    position: relative;
     &_description {
       h2 {
         font-family: "Cormorant", serif;
         font-weight: 500;
-        font-size: 36px;
+        font-size: calc(26px + 10 * (100vw / 1920));
         color: #333333;
       }
       p {
@@ -678,20 +716,12 @@ $breadcrumbColor: #959595;
         padding: 15px 23px;
       }
     }
-    &_img {
-      position: relative;
-      img {
-        position: absolute;
-        top: -50%;
-        left: 0;
-      }
-    }
   }
 }
 //CALLBACK
 .callBack {
   background-color: $bacground;
-  padding: 190px 0 120px 0;
+  //padding: 9.5rem 0 6rem 0;
   position: relative;
   &_img {
     img {
@@ -703,10 +733,10 @@ $breadcrumbColor: #959595;
       transform: translateY(-50%);
     }
   }
-  & &_content {
+  &_content {
     justify-content: flex-end;
     &_form {
-      min-height: 650px;
+      //min-height: 650px;
       h2 {
         font-family: "Cormorant", serif;
         font-weight: 500;
@@ -787,7 +817,7 @@ $breadcrumbColor: #959595;
   padding: 40px 0;
   background-color: $white;
   &_content {
-    justify-content: space-between;
+    //justify-content: space-between;
     &_subscription {
       p {
         font-size: 16px;
@@ -835,7 +865,6 @@ $breadcrumbColor: #959595;
         font-family: "HelveticaNeueCyr-medium";
       }
       &_group {
-        //justify-content: space-between;
         a {
           position: relative;
           text-align: right;
@@ -888,4 +917,101 @@ $breadcrumbColor: #959595;
   width: 100vw;
   background-color: #939393;
   height: 1px;
+}
+
+//DELEVIRY
+.deliveryMain {
+  background-color: $bacground;
+  padding: 50px 0 125px 0;
+  &_content {
+    h2 {
+      font-family: "Cormorant", serif;
+      font-weight: 500;
+      font-size: 36px;
+      color: $wordsColor;
+    }
+    &_block {
+      margin: 3rem 0 0 0;
+      h5 {
+        font-family: "HelveticaNeueCyr-medium";
+        font-weight: 550;
+        font-size: 18px;
+        color: $wordsColor;
+        border-bottom: 1px solid $ColorButton;
+        padding: 0 0 1rem 0;
+        margin: 0 0 1.5rem 0;
+      }
+      p {
+        color: $wordsColor;
+        font-family: "HelveticaNeueCyr-reg";
+        font-size: 14px;
+      }
+      &_img {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+//CONTACTS CONTACTSMAIN
+.conatctsMain {
+  position: relative;
+  background-color: $bacground;
+  padding: 50px 0 120px 0;
+  img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 40vw;
+    height: 50vh;
+    object-fit: cover;
+  }
+  &_content {
+    h2 {
+      font-size: 36px;
+      font-family: "Cormorant", serif;
+      font-weight: 500;
+      color: $wordsColor;
+    }
+    &_block {
+      margin: 3rem 0 0 0;
+      &_card {
+        margin: 1.8rem 0 0 0;
+        p {
+          font-family: "HelveticaNeueCyr-reg";
+          font-size: 14px;
+          color: $breadcrumbColor;
+        }
+        h5 {
+          font-family: "HelveticaNeueCyr-medium";
+          font-size: 16px;
+          color: $wordsColor;
+        }
+        &_img {
+          display: flex;
+          justify-content: space-between;
+          a {
+            text-decoration: none;
+            font-family: "HelveticaNeueCyr-reg";
+            font-size: 14px;
+            color: $wordsColor;
+            position: relative;
+          }
+          a::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -20px;
+            background-image: url("../../img/icon/arrowSocial.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 14px;
+            height: 14px;
+          }
+        }
+      }
+    }
+  }
 }

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/normalize.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="style/dist/cart.css">
+  <title>PmP</title>
+</head>
+<body>
+  <div class="wrap">
+    <div class="row m-0 stockInfo">
+      <p class="col-4">Информация о какой нибудь акции или любая другая информация</p>
+      <a href="#"><img src="img/icon/newsClose.svg" alt="закрыть"></a>
+    </div>
+    <header class="header">
+      <div class="container">
+        <div class="row header_content">
+          <div class="col-1 header_content_logo">
+            <a href="index.html"><img src="img/icon/pmpLogo.svg" alt="ПМП - Терапия"></a>
+          </div>
+          <nav class="col-6 header_content_navigation">
+            <a href="about.html">О продукте</a>
+            <a href="catalog.html">Каталог</a>
+            <a href="deleviry.html">Доставка и возврат</a>
+            <a href="contacts.html">Контакты</a>
+          </nav>
+          <div class="col-3 header_content_user">
+            <div class="header_content_user_search">
+              <input type="search" placeholder="Поиск">
+              <button type="button"><img src="img/icon/search.svg" alt="Поиск"></button>
+            </div>
+            <div class="header_content_user_block">
+              <a href="#"><img src="img/icon/user.svg" alt="Личный кабинет"></a>
+              <a href="cart.html"><img src="img/icon/cart.svg" alt="Корзина Пользователя"></a>
+            </div>
+          </div>
+        </div>
+      </div>    
+    </header>
+    <div class="mainInfo">
+      <div class="container">
+        <div class="mainInfo_content">
+          <nav class="breadcrumb">
+            <ol class="breadcrumb-list">
+              <li class="breadcrumb-item"><a href="#">Главная</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Корзина</li>
+            </ol>
+          </nav>
+          <div class="row mainInfo_content_title">
+            <h2 class="col-12">Корзина</h2>
+          </div>
+          <div class="row mainInfo_content_cart">
+            <div class="row mainInfo_content_cart_top">
+              <h6 class="col-3 p-0">Наименование</h6>
+              <h6 class="col-2">Объем</h6>
+              <h6 class="col-2">Количество</h6>
+              <h6 class="col-2">Стоимость</h6>
+            </div>
+            <div class="row p-0 mainInfo_content_cart_info">
+              <p class="col-3 p-0">PMP peppermint Peel — Mild</p>
+              <p class="col-2">5 флаконов по 5 мл</p>
+              <div class="col-2 select">
+                <select name="number" id="select">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+                <label for="select"><img src="img/icon/selectArrow.svg" alt=""></label>
+                <button type="button">Удалить</button>
+              </div>
+              <h6 class="col-2">1 000 руб.</h6>
+            </div>
+             <div class="row p-0 mainInfo_content_cart_info">
+              <p class="col-3 p-0">PMP peppermint Peel — Mild</p>
+              <p class="col-2">5 флаконов по 5 мл</p>
+              <div class="col-2 select">
+                <select name="number" id="select">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+                <label for="select"><img src="img/icon/selectArrow.svg" alt=""></label>
+                <button type="button">Удалить</button>
+              </div>
+              <h6 class="col-2">1 000 руб.</h6>
+            </div>
+             <div class="row p-0 mainInfo_content_cart_info">
+              <p class="col-3 p-0">PMP peppermint Peel — Mild</p>
+              <p class="col-2">5 флаконов по 5 мл</p>
+              <div class="col-2 select">
+                <select name="number" id="select">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+                <label for="select"><img src="img/icon/selectArrow.svg" alt=""></label>
+                <button type="button">Удалить</button>
+              </div>
+              <h6 class="col-2">1 000 руб.</h6>
+            </div>
+            <div class="row p-0 mainInfo_content_cart_payment">
+              <div class="col-5 mainInfo_content_cart_payment_block">
+                <h6>Применить промокод</h6>
+                <button type="button"><img src="img/icon/plus.svg" alt=""></button>
+              </div>
+            </div>
+            <div class="row p-0 mainInfo_content_cart_payment">
+              <div class="col-5 mainInfo_content_cart_payment_block">
+                <p>Выбран вариант доставки курьером <span>19.07.2021</span></p>
+                <button type="button"><img src="img/icon/plus.svg" alt=""></button>
+              </div>
+            </div>
+            <div class="row p-0 mainInfo_content_cart_payment">
+              <div class="col-5 mainInfo_content_cart_payment_block">
+                <h6 class="total">Итоговая стоимость</h6>
+                <h5>3 000 руб.</h5>
+              </div>
+            </div>
+            <div class="row p-0 mainInfo_content_cart_button">
+              <div class="col-5 p-0 mainInfo_content_cart_button_block">
+                <button class="col-12" type="button">Перейти к оплате</button>
+                <div class="col-5 mainInfo_content_cart_button_img">
+                  <img src="img/icon/applePay.svg" alt="">
+                  <img src="img/icon/googlePay.svg" alt="">
+                  <img src="img/icon/masterCard.svg" alt="">
+                  <img src="img/icon/visa.svg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="row footer_content">
+          <div class="col-4 footer_content_subscription">
+            <p class="mb-4">Оформите подписку, чтобы получить скидку 10% на первый заказ и быть в курсе всех акций!</p>
+            <div class="footer_content_subscription_item">
+              <input type="email" placeholder="Ваш Email">
+              <button type="button"><img src="img/icon/footerButtonArrow.svg" alt=""></button>
+            </div>
+          </div>
+          <nav class="col-4 footer_content_navigation">
+            <div class="row">
+              <a href="#" class="col-5 offset-1">О продукте</a>
+              <a href="#" class="col-5">Доставка и возврат</a>
+              <a href="#" class="col-5 offset-1">Каталог</a>
+              <a href="#" class="col-5">Контакты</a>
+            </div>
+          </nav>
+          <div class="col-3 footer_content_social">
+            <div class="row">
+              <h4 class="col-12">Мы в социальных сетях</h4>
+            </div>
+            <div class="row footer_content_social_group">
+              <a href="#" class="col-3 mx-3 p-0">Instagram</a>
+              <a href="#" class="col-3 mx-3 p-0">Facebook</a>
+              <a href="#" class="col-2 mx-3 p-0">VK</a>
+            </div>
+          </div>
+          <div class="col-12 mt-5 footer_content_logo">
+            <div class="row footer_content_logo_group">
+              <a href="#" class="col-3">Политика конфиденциальности</a>
+              <img class="col-1" src="img/icon/pmpLogo.svg" alt="ПМП - Терапия">
+              <p class="col-2">Сайт сделан в RA-Studio</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

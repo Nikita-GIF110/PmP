@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/normalize.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="style/dist/personalArea.css">
+  <title>PmP</title>
+</head>
+<body>
+  <div class="wrap">
+     <div class="row m-0 stockInfo">
+      <p class="col-4">Информация о какой нибудь акции или любая другая информация</p>
+      <a href="#"><img src="img/icon/newsClose.svg" alt="закрыть"></a>
+    </div>
+    <header class="header">
+      <div class="container">
+        <div class="row header_content">
+          <div class="col-1 header_content_logo">
+            <a href="index.html"><img src="img/icon/pmpLogo.svg" alt="ПМП - Терапия"></a>
+          </div>
+          <nav class="col-6 header_content_navigation">
+            <a href="about.html">О продукте</a>
+            <a href="catalog.html">Каталог</a>
+            <a href="deleviry.html">Доставка и возврат</a>
+            <a href="contacts.html">Контакты</a>
+          </nav>
+          <div class="col-3 header_content_user">
+            <div class="header_content_user_search">
+              <input type="search" placeholder="Поиск">
+              <button type="button"><img src="img/icon/search.svg" alt="Поиск"></button>
+            </div>
+            <div class="header_content_user_block">
+              <a href="personalArea.html"><img src="img/icon/user.svg" alt="Личный кабинет"></a>
+              <a href="cart.html"><img src="img/icon/cart.svg" alt="Корзина Пользователя"></a>
+            </div>
+          </div>
+        </div>
+      </div>    
+    </header>
+    <div class="personalArea">
+      <div class="container">
+        <div class="personalArea_content">
+          <nav class="breadcrumb">
+            <ol class="breadcrumb-list">
+              <li class="breadcrumb-item"><a href="#">Главная</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Личный кабинет</li>
+            </ol>
+          </nav>
+          <h2>Здравствуйте, <span>Елена</span>!</h2>
+          <div class="row">
+            <div class="col-4 personalArea_content_block">
+              <div class="personalArea_content_block_item">
+                <a href="#" class="">Личные данные</a>
+              </div>
+              <div class="personalArea_content_block_item">
+                <a href="#">История заказов</a>
+              </div>
+              <div class="personalArea_content_block_item">
+                <a href="#">Избранное</a>
+              </div>
+              <div class="personalArea_content_block_item">
+                <a href="#">Вебинары</a>
+              </div>
+              <div class="personalArea_content_block_item">
+                <a href="#" class="exitBtn">Выйти</a>
+              </div>
+            </div>
+            <div class="col-6 offset-1 personalArea_content_info">
+              <div class="row">
+                <h5 class="col-5 p-0">Личная информация</h5>
+                <button class="col-5 p-0 offset-2" type="button">Редактировать данные</button>
+              </div>
+              <div class="row personalArea_content_info_name">
+                <div class="col-12 personalArea_content_info_item">
+                  <input type="text" id="userSurname">
+                  <label for="userSurname">Фамилия</label>
+                </div>
+                <div class="col-12 personalArea_content_info_item">
+                  <input type="text" id="userName">
+                  <label for="userName">Имя</label>
+                </div>
+                <div class="col-12 personalArea_content_info_item">
+                  <input type="text" id="userPatronymic">
+                  <label for="userPatronymic">Отчество</label>
+                </div>
+              </div>
+              <div class="row personalArea_content_info_mail">
+                <div class="col-12 personalArea_content_info_item">
+                  <input type="tel" id="userPhone">
+                  <label for="userPhone">Телефон</label>
+                </div>
+                <div class="col-12 personalArea_content_info_item">
+                  <input type="email" id="userEmail">
+                  <label for="userEmail">Email</label>
+                </div>
+                <div class="col-12 wrap-custom-checkbox">
+                  <input type="checkbox" id="userNotifications" checked>
+                  <label for="userNotifications">Получать информацию про текущие акции и скидки</label>
+                </div>
+                <button class="col-3 p-0 passwordBtn" type="button">Изменить пароль</button>
+              </div>
+              <div class="row">
+                <h5 class="col-5 p-0">Адрес доставки</h5>
+                <button class="col-5 p-0 offset-2" type="button">Добавить адрес доставки</button>
+              </div>
+              <div class="row personalArea_content_info_adress">
+                <div class="personalArea_content_info_item">
+                  <p>Адрес доставки по умолчанию</p>
+                  <p>Санкт - Петербург, Ленина, 6, кв. 250</p>
+                  <button type="button" class="removeBtn">Удалить</button>
+                </div>
+                <div class="personalArea_content_info_item">
+                  <p>Другие адреса</p>
+                  <p>Санкт - Петербург, Ленина, 6, кв. 250</p>
+                  <button type="button" class="removeBtn">Удалить</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-7 offset-1 personalArea_content_orders">
+              <div class="row">
+                <div class="row">
+                  <h5>Текущие заказы</h5>
+                </div>
+                <div class="personalArea_content_orders_item active">
+                  <div class="row personalArea_content_orders_item_top">
+                    <div class="col-5">
+                      <h5>Заказ от 16 июля 2021</h5>
+                      <p>29837567871</p>
+                    </div>
+                    <div class="col-3 button">
+                      <button type="button">Оплатить заказ</button>
+                    </div>
+                    <div class="col-4 payment">
+                      <h5>3 500 руб</h5>
+                      <p><span class="goingTo"></span>Заказ собирается</p>
+                    </div>
+                  </div>
+                  <div class="row personalArea_content_orders_item_description">
+                    <div class="row personalArea_content_orders_item_description_top">
+                      <div class="col-8">
+                        <h5><span>3</span> товара</h5>
+                      </div>
+                      <div class="col-4 button">
+                        <a href="#">Скрыть подробности</a>
+                      </div>
+                    </div>
+                    <div class="personalArea_content_orders_item_description_group">
+                      <div class="row">
+                        <div class="col-8 personalArea_content_orders_item_description_group_name">
+                          <h6>PMP peppermint Peel — Mild</h6>
+                        </div>
+                        <div class="col-2 personalArea_content_orders_item_description_group_amount">
+                          <p>1 шт.</p>
+                        </div>
+                        <div class="col-2 personalArea_content_orders_item_description_group_price">
+                          <h6>1 500 руб</h6>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-8 personalArea_content_orders_item_description_group_name">
+                          <h6>PMP peppermint Peel — Intense</h6>
+                        </div>
+                        <div class="col-2 personalArea_content_orders_item_description_group_amount">
+                          <p>1 шт.</p>
+                        </div>
+                        <div class="col-2 personalArea_content_orders_item_description_group_price">
+                          <h6>1 500 руб</h6>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-8 personalArea_content_orders_item_description_group_name">
+                          <h6>Силиконовые перчатки (размер М) для нанесения пилингов PMP peppermint Peel</h6>
+                        </div>
+                        <div class="col-2 personalArea_content_orders_item_description_group_amount">
+                          <p>1 шт.</p>
+                        </div>
+                        <div class="col-2 personalArea_content_orders_item_description_group_price">
+                          <h6>1 500 руб</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="personalArea_content_orders_item">
+                  <div class="row personalArea_content_orders_item_top">
+                    <div class="col-5">
+                      <h5>Заказ от 16 июля 2021</h5>
+                      <p>29837567871</p>
+                    </div>
+                    <div class="col-3 button">
+                      <button type="button">Оплатить заказ</button>
+                    </div>
+                    <div class="col-4 payment">
+                      <h5>3 500 руб</h5>
+                      <p><span class="expected"></span>Ожидается оплата</p>
+                    </div>
+                  </div>
+                  <div class="row personalArea_content_orders_item_description">
+                    <div class="row personalArea_content_orders_item_description_top">
+                      <div class="col-8">
+                        <h5><span>3</span> товара</h5>
+                      </div>
+                      <div class="col-4 button">
+                        <a href="#">Скрыть подробности</a>
+                      </div>
+                    </div>
+                    <div class="personalArea_content_orders_item_description_group">
+                      <div class="row">
+                        <div class="col-8 personalArea_content_orders_item_description_group_name">
+                          <h6>PMP peppermint Peel — Mild</h6>
+                        </div>
+                        <div class="col-2 personalArea_content_orders_item_description_group_amount">
+                          <p>1 шт.</p>
+                        </div>
+                        <div class="col-2 personalArea_content_orders_item_description_group_price">
+                          <h6>1 500 руб</h6>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-8 personalArea_content_orders_item_description_group_name">
+                          <h6>PMP peppermint Peel — Intense</h6>
+                        </div>
+                        <div class="col-2 personalArea_content_orders_item_description_group_amount">
+                          <p>1 шт.</p>
+                        </div>
+                        <div class="col-2 personalArea_content_orders_item_description_group_price">
+                          <h6>1 500 руб</h6>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-8 personalArea_content_orders_item_description_group_name">
+                          <h6>Силиконовые перчатки (размер М) для нанесения пилингов PMP peppermint Peel</h6>
+                        </div>
+                        <div class="col-2 personalArea_content_orders_item_description_group_amount">
+                          <p>1 шт.</p>
+                        </div>
+                        <div class="col-2 personalArea_content_orders_item_description_group_price">
+                          <h6>1 500 руб</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mt-5">
+                <div class="row">
+                  <h5>Полученные заказы</h5>
+                </div>
+                <div class="personalArea_content_orders_item">
+                  <div class="row personalArea_content_orders_item_top">
+                    <div class="col-5">
+                      <h5>Заказ от 16 июля 2021</h5>
+                      <p>29837567871</p>
+                    </div>
+                    <div class="col-3 button">
+                      <button type="button">Оплатить заказ</button>
+                    </div>
+                    <div class="col-4 payment">
+                      <h5>3 500 руб</h5>
+                      <p><span class="delivered"></span>Заказ собирается</p>
+                    </div>
+                  </div>
+                  <div class="row personalArea_content_orders_item_description">
+                    <div class="row personalArea_content_orders_item_description_top">
+                      <div class="col-8">
+                        <h5><span>3</span> товара</h5>
+                      </div>
+                      <div class="col-4 button">
+                        <a href="#">Скрыть подробности</a>
+                      </div>
+                    </div>
+                    <div class="personalArea_content_orders_item_description_group">
+                      <div class="row">
+                        <div class="col-8 personalArea_content_orders_item_description_group_name">
+                          <h6>PMP peppermint Peel — Mild</h6>
+                        </div>
+                        <div class="col-2 personalArea_content_orders_item_description_group_amount">
+                          <p>1 шт.</p>
+                        </div>
+                        <div class="col-2 personalArea_content_orders_item_description_group_price">
+                          <h6>1 500 руб</h6>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-8 personalArea_content_orders_item_description_group_name">
+                          <h6>PMP peppermint Peel — Intense</h6>
+                        </div>
+                        <div class="col-2 personalArea_content_orders_item_description_group_amount">
+                          <p>1 шт.</p>
+                        </div>
+                        <div class="col-2 personalArea_content_orders_item_description_group_price">
+                          <h6>1 500 руб</h6>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-8 personalArea_content_orders_item_description_group_name">
+                          <h6>Силиконовые перчатки (размер М) для нанесения пилингов PMP peppermint Peel</h6>
+                        </div>
+                        <div class="col-2 personalArea_content_orders_item_description_group_amount">
+                          <p>1 шт.</p>
+                        </div>
+                        <div class="col-2 personalArea_content_orders_item_description_group_price">
+                          <h6>1 500 руб</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="personalArea_content_orders_item">
+                  <div class="row personalArea_content_orders_item_top">
+                    <div class="col-5">
+                      <h5>Заказ от 16 июля 2021</h5>
+                      <p>29837567871</p>
+                    </div>
+                    <div class="col-3 button">
+                      <button type="button">Оплатить заказ</button>
+                    </div>
+                    <div class="col-4 payment">
+                      <h5>3 500 руб</h5>
+                      <p><span class="delivered"></span>Ожидается оплата</p>
+                    </div>
+                  </div>
+                  <div class="row personalArea_content_orders_item_description">
+                    <div class="row personalArea_content_orders_item_description_top">
+                      <div class="col-8">
+                        <h5><span>3</span> товара</h5>
+                      </div>
+                      <div class="col-4 button">
+                        <a href="#">Скрыть подробности</a>
+                      </div>
+                    </div>
+                    <div class="personalArea_content_orders_item_description_group">
+                      <div class="row">
+                        <div class="col-8 personalArea_content_orders_item_description_group_name">
+                          <h6>PMP peppermint Peel — Mild</h6>
+                        </div>
+                        <div class="col-2 personalArea_content_orders_item_description_group_amount">
+                          <p>1 шт.</p>
+                        </div>
+                        <div class="col-2 personalArea_content_orders_item_description_group_price">
+                          <h6>1 500 руб</h6>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-8 personalArea_content_orders_item_description_group_name">
+                          <h6>PMP peppermint Peel — Intense</h6>
+                        </div>
+                        <div class="col-2 personalArea_content_orders_item_description_group_amount">
+                          <p>1 шт.</p>
+                        </div>
+                        <div class="col-2 personalArea_content_orders_item_description_group_price">
+                          <h6>1 500 руб</h6>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-8 personalArea_content_orders_item_description_group_name">
+                          <h6>Силиконовые перчатки (размер М) для нанесения пилингов PMP peppermint Peel</h6>
+                        </div>
+                        <div class="col-2 personalArea_content_orders_item_description_group_amount">
+                          <p>1 шт.</p>
+                        </div>
+                        <div class="col-2 personalArea_content_orders_item_description_group_price">
+                          <h6>1 500 руб</h6>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-8 personalArea_content_catalog">
+              <div class="row">
+                <h5>Избранные товары</h5>
+                <div class="row">
+                  <a href="cardProduct.html" class="col-4 catalog_content_block_card">
+                    <button type="button" class="favorites"><img src="img/icon/greyHeart.svg" alt="Добавить в избранное"></button>
+                    <div class="mb-3 catalog_content_block_card_img">
+                      <img src="img/cardImg.png" alt="Пепперминтпил МАЙЛД">
+                    </div>
+                    <div class="catalog_content_block_card_description">
+                      <h4>Пепперминтпил МАЙЛД</h4>
+                      <p>5 флаконов по 5 мл</p>
+                      <p class="price">1000 руб.</p>
+                      <button type="button" class="col-12">Добавить в корзину</button>
+                    </div>
+                  </a>
+                  <a href="cardProduct.html" class="col-4 catalog_content_block_card">
+                    <button type="button" class="favorites"><img src="img/icon/greyHeart.svg" alt="Добавить в избранное"></button>
+                    <div class="mb-3 catalog_content_block_card_img">
+                      <img src="img/cardImg.png" alt="Пепперминтпил МАЙЛД">
+                    </div>
+                    <div class="catalog_content_block_card_description">
+                      <h4>Пепперминтпил МАЙЛД</h4>
+                      <p>5 флаконов по 5 мл</p>
+                      <p class="price">1000 руб.</p>
+                      <button type="button" class="col-12">Добавить в корзину</button>
+                    </div>
+                  </a>
+                  <a href="cardProduct.html" class="col-4 catalog_content_block_card">
+                    <button type="button" class="favorites"><img src="img/icon/greyHeart.svg" alt="Добавить в избранное"></button>
+                    <div class="mb-3 catalog_content_block_card_img">
+                      <img src="img/cardImg.png" alt="Пепперминтпил МАЙЛД">
+                    </div>
+                    <div class="catalog_content_block_card_description">
+                      <h4>Пепперминтпил МАЙЛД</h4>
+                      <p>5 флаконов по 5 мл</p>
+                      <p class="price">1000 руб.</p>
+                      <button type="button" class="col-12">Добавить в корзину</button>
+                    </div>
+                  </a>
+                  <a href="cardProduct.html" class="col-4 catalog_content_block_card">
+                    <button type="button" class="favorites"><img src="img/icon/greyHeart.svg" alt="Добавить в избранное"></button>
+                    <div class="mb-3 catalog_content_block_card_img">
+                      <img src="img/cardImg.png" alt="Пепперминтпил МАЙЛД">
+                    </div>
+                    <div class="catalog_content_block_card_description">
+                      <h4>Пепперминтпил МАЙЛД</h4>
+                      <p>5 флаконов по 5 мл</p>
+                      <p class="price">1000 руб.</p>
+                      <button type="button" class="col-12">Добавить в корзину</button>
+                    </div>
+                  </a>
+                  <a href="cardProduct.html" class="col-4 catalog_content_block_card">
+                    <button type="button" class="favorites"><img src="img/icon/greyHeart.svg" alt="Добавить в избранное"></button>
+                    <div class="mb-3 catalog_content_block_card_img">
+                      <img src="img/cardImg.png" alt="Пепперминтпил МАЙЛД">
+                    </div>
+                    <div class="catalog_content_block_card_description">
+                      <h4>Пепперминтпил МАЙЛД</h4>
+                      <p>5 флаконов по 5 мл</p>
+                      <p class="price">1000 руб.</p>
+                      <button type="button" class="col-12">Добавить в корзину</button>
+                    </div>
+                  </a>
+                  <a href="cardProduct.html" class="col-4 catalog_content_block_card">
+                    <button type="button" class="favorites"><img src="img/icon/greyHeart.svg" alt="Добавить в избранное"></button>
+                    <div class="mb-3 catalog_content_block_card_img">
+                      <img src="img/cardImg.png" alt="Пепперминтпил МАЙЛД">
+                    </div>
+                    <div class="catalog_content_block_card_description">
+                      <h4>Пепперминтпил МАЙЛД</h4>
+                      <p>5 флаконов по 5 мл</p>
+                      <p class="price">1000 руб.</p>
+                      <button type="button" class="col-12">Добавить в корзину</button>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="row footer_content">
+          <div class="col-4 footer_content_subscription">
+            <p class="mb-4">Оформите подписку, чтобы получить скидку 10% на первый заказ и быть в курсе всех акций!</p>
+            <div class="footer_content_subscription_item">
+              <input type="email" placeholder="Ваш Email">
+              <button type="button"><img src="img/icon/footerButtonArrow.svg" alt=""></button>
+            </div>
+          </div>
+          <nav class="col-4 footer_content_navigation">
+            <div class="row">
+              <a href="#" class="col-5 offset-1">О продукте</a>
+              <a href="#" class="col-5">Доставка и возврат</a>
+              <a href="#" class="col-5 offset-1">Каталог</a>
+              <a href="#" class="col-5">Контакты</a>
+            </div>
+          </nav>
+          <div class="col-3 footer_content_social">
+            <div class="row">
+              <h4 class="col-12">Мы в социальных сетях</h4>
+            </div>
+            <div class="row footer_content_social_group">
+              <a href="#" class="col-3 mx-3 p-0">Instagram</a>
+              <a href="#" class="col-3 mx-3 p-0">Facebook</a>
+              <a href="#" class="col-2 mx-3 p-0">VK</a>
+            </div>
+          </div>
+          <div class="col-12 mt-5 footer_content_logo">
+            <div class="row footer_content_logo_group">
+              <a href="#" class="col-3">Политика конфиденциальности</a>
+              <img class="col-1" src="img/icon/pmpLogo.svg" alt="ПМП - Терапия">
+              <p class="col-2">Сайт сделан в RA-Studio</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,159 @@
+@media screen and (max-width: 1920px) {
+  .main {
+    &_content {
+      &_description {
+        align-items: flex-start;
+      }
+    }
+  }
+  .about {
+    &_content {
+      &_description {
+      }
+      &_img {
+        img {
+          width: 50vw;
+          height: 50vh;
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+  .action {
+    .imgLeft {
+      display: block;
+    }
+    &_content {
+      &_img {
+        img {
+          width: 100%;
+          height: 60vh;
+        }
+      }
+      .hidden {
+        display: none;
+      }
+    }
+  }
+  .result {
+    &_content {
+      &_img {
+        img {
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+  .callBack {
+    padding: 9.5rem 0 6rem 0;
+    &_img {
+      img {
+        display: block;
+      }
+    }
+    &_content {
+      &_form {
+        min-height: 650px;
+        .form {
+          &_item {
+            margin-bottom: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 992px) {
+  .main {
+    &_content {
+      justify-content: center;
+      &_description {
+        text-align: center;
+        align-items: center;
+        a {
+          max-width: 200px;
+        }
+      }
+    }
+  }
+  .product {
+    &_content {
+      &_card {
+        &_name {
+          a {
+            display: flex;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+  .about {
+    &_content {
+      &_description {
+        margin-top: 22rem;
+      }
+      &_img {
+        img {
+          top: 29%;
+          height: 50vh;
+          width: 100vw;
+        }
+      }
+    }
+  }
+  .action {
+    .imgLeft {
+      display: none;
+    }
+    &_content {
+      &_img {
+        img {
+          width: 100%;
+          height: 60vh;
+        }
+      }
+      .hidden {
+        display: block;
+      }
+    }
+  }
+  .result {
+    &_content {
+      &_description {
+        margin-bottom: 2.5rem;
+      }
+      &_img {
+        position: relative;
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+  .callBack {
+    padding: 2rem 0;
+    &_img {
+      img {
+        display: none;
+      }
+    }
+    &_content {
+      &_form {
+        min-height: auto;
+        .form {
+          &_item {
+            margin-bottom: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}

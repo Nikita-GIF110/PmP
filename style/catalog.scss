@@ -55,6 +55,56 @@ $numberColor: #738793;
     .cards {
       .catalog_content_block_card {
         margin-bottom: 2rem;
+        text-decoration: none;
+        position: relative;
+        .favorites {
+          position: absolute;
+          z-index: 5;
+          top: 0.8rem;
+          right: 1.5rem;
+          border: none;
+          background-color: transparent;
+        }
+        &_img {
+          padding: 100px 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: $bacgroundWhite;
+          img {
+            max-width: 100%;
+            height: auto;
+          }
+        }
+        &_description {
+          h4 {
+            font-family: "HelveticaNeueCyr-medium";
+            font-size: 16px;
+            color: $wordsColor;
+            font-weight: 550;
+          }
+          p {
+            font-family: "HelveticaNeueCyr-medium";
+            color: $grey;
+            font-size: 14px;
+          }
+          .price {
+            font-family: "HelveticaNeueCyr-medium";
+            color: $wordsColor;
+            font-size: 18px;
+          }
+          button {
+            background-color: transparent;
+            padding: 16px 0;
+            display: flex;
+            justify-content: center;
+            justify-items: stretch;
+            border: 1px solid $ColorButton;
+            color: $ColorButton;
+            font-size: 14px;
+            border-radius: 5px;
+          }
+        }
       }
     }
   }
