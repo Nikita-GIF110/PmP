@@ -14,19 +14,20 @@ $numberColor: #738793;
 
 .personalArea {
   background-color: $bacground;
-  padding: 50px 0 120px 0;
+  //padding: 50px 0 120px 0;
   &_content {
     h2 {
-      font-size: 36px;
+      font-size: calc(26px + 10 * (100vw / 1920));
       font-family: "Cormorant", serif;
       font-weight: 500;
       color: $wordsColor;
-      margin: 0 0 3rem 0;
+      margin: 0 0 2.5rem 0;
     }
     &_block {
       &_item {
-        border-top: 1px solid #dadada;
+        //border-top: 1px solid #dadada;
         padding: 1rem 0 1rem 0;
+        margin-right: 1rem;
         a {
           font-size: 16px;
           font-family: "HelveticaNeueCyr-reg";
@@ -42,7 +43,7 @@ $numberColor: #738793;
         font-weight: 700;
       }
       &_item:last-child {
-        border-bottom: 1px solid #dadada;
+        //border-bottom: 1px solid #dadada;
       }
     }
     &_info {
@@ -51,6 +52,7 @@ $numberColor: #738793;
         font-family: "HelveticaNeueCyr-medium";
         font-size: 18px;
         color: $wordsColor;
+        margin: 0 0 0 0;
       }
       button {
         color: #a3a3a3;
@@ -58,19 +60,20 @@ $numberColor: #738793;
         font-size: 14px;
         border: none;
         background-color: transparent;
-        text-align: right;
+        text-align: left;
       }
       .passwordBtn {
         text-align: left;
       }
       &_item {
         position: relative;
-        padding: 0.5rem 0;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        box-sizing: content-box;
         display: flex;
         flex-direction: column;
         //align-items: center;
         justify-content: center;
-        border-bottom: 1px solid $backgroundStockInfo;
         input:not(input[type="checkbox"]) {
           width: 100%;
           border: none;
@@ -80,11 +83,13 @@ $numberColor: #738793;
           font-size: 18px;
           //padding: 0.5rem 0 0.5rem 0;
           margin: 0.7rem 0 0 0;
+          border-bottom: 1px solid $backgroundStockInfo;
         }
         label:not(label[for="userNotifications"]) {
           position: absolute;
           top: 50%;
-          left: 0;
+          transform: translateY(-50%);
+
           color: $numberColor;
           transition: 0.1s;
         }
@@ -111,11 +116,9 @@ $numberColor: #738793;
           margin: 0;
         }
         .removeBtn {
+          padding: 0;
           visibility: hidden;
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          right: 0;
+          font-size: 9px;
         }
       }
       &_item:hover .removeBtn {
@@ -123,11 +126,14 @@ $numberColor: #738793;
       }
       .wrap-custom-checkbox {
         position: relative;
-        margin: 1.5rem 0 2rem 0;
+        display: flex;
+        align-items: center;
+        //margin: 1.5rem 0 2rem 0;
         input[type="checkbox"] {
           visibility: hidden;
         }
         label {
+          transform: translateX(4%);
           //margin-left: 0.5rem;
           color: $wordsColor;
           font-size: 14px;
@@ -139,9 +145,6 @@ $numberColor: #738793;
           background-image: url("../../img/icon/checkbox.svg");
           background-repeat: no-repeat;
           background-position: center;
-          top: 50%;
-          left: 4px;
-          transform: translateY(-50%);
           opacity: 0;
           width: 7px;
           height: 6px;
@@ -152,7 +155,7 @@ $numberColor: #738793;
         content: "";
         position: absolute;
         top: 50%;
-        left: 0;
+        left: 3%;
         transform: translateY(-50%);
         width: 15px;
         height: 15px;
@@ -163,28 +166,48 @@ $numberColor: #738793;
         opacity: 1;
       }
       &_name {
-        margin-top: 2rem;
+        //margin-top: 2rem;
       }
       &_mail {
-        margin-top: 2rem;
-        margin-bottom: 4.5rem;
+        //margin-top: 2rem;
+        //margin-bottom: 4.5rem;
       }
       &_adress {
-        margin-top: 2rem;
+        //margin-top: 2rem;
+        .personalArea_content_info_item {
+          p:not(:first-child) {
+            max-width: 95%;
+            border-bottom: 1px solid #738793;
+            transition: 0.2s;
+          }
+        }
+        .personalArea_content_info_item:hover p {
+          border-bottom: none;
+        }
+        .personalArea_content_info_item:hover .removeBtn {
+          visibility: visible;
+        }
       }
     }
     &_orders {
-      h5 {
+      display: block;
+      &_title {
+        width: 100%;
         font-family: "HelveticaNeueCyr-medium";
         color: $wordsColor;
         font-size: 18px;
-        margin: 0 0 1.5rem 0;
+        //padding: 0 0 1.5rem 0;
+        border-bottom: 1px solid $backgroundStockInfo;
       }
       &_item {
         border-bottom: 1px solid $backgroundStockInfo;
-        margin-bottom: 1.5rem;
+        //margin-bottom: 1.5rem;
+        //padding: 1.5rem 0 1rem 0;
+        //margin: 1.5rem 0 0 0;
+        overflow: hidden;
         &_top {
           margin-bottom: 1.5rem;
+          justify-content: space-between;
           h5 {
             font-family: "HelveticaNeueCyr-medium";
             color: $wordsColor;
@@ -198,17 +221,22 @@ $numberColor: #738793;
             margin-bottom: 0;
           }
           .button {
-            text-align: right;
+            //text-align: right;
+            .expectedBtn {
+              color: #738793;
+            }
+            .cancellationBtn {
+              color: #ea4335;
+            }
             button {
               background-color: transparent;
               border: none;
-              color: #ea4335;
               font-family: "HelveticaNeueCyr-reg";
               font-size: 14px;
             }
           }
           .payment {
-            text-align: right;
+            //text-align: right;
             h5 {
               font-family: "HelveticaNeueCyr-medium";
               color: $wordsColor;
@@ -246,39 +274,45 @@ $numberColor: #738793;
             padding: 1rem 0;
             border-top: 1px solid #dadada;
             border-bottom: 1px solid #dadada;
+            justify-content: space-between;
             h5 {
               font-family: "HelveticaNeueCyr-reg";
               font-size: 16px;
               color: $wordsColor;
               margin-bottom: 0;
             }
-            .button {
+            .buttonShow {
               text-align: right;
+              position: relative;
+              .btnHidde {
+                display: none;
+              }
               a {
                 position: relative;
                 text-decoration: none;
                 font-family: "HelveticaNeueCyr-reg";
                 font-size: 14px;
                 color: $wordsColor;
-                margin-right: 1rem;
+                margin-right: 2rem;
               }
-              a::before {
-                content: "";
-                position: absolute;
-                top: 50%;
-                right: -1.5rem;
-                transform: translateY(-50%);
-                background-image: url("../../img/icon/personalAreaArrow.svg");
-                background-repeat: no-repeat;
-                background-position: center;
-                width: 8px;
-                height: 4px;
-                transition: 0.3s;
-              }
+            }
+            .buttonShow::before {
+              content: "";
+              position: absolute;
+              top: 50%;
+              //right: 1rem;
+              //transform: translateY(-50%);
+              background-image: url("../../img/icon/personalAreaArrow.svg");
+              background-repeat: no-repeat;
+              background-position: center;
+              width: 8px;
+              height: 4px;
+              transition: 0.3s;
             }
           }
           &_group {
-            margin-top: 1.5rem;
+            //margin-top: 1.5rem;
+            //padding: 1.5rem 0;
             display: none;
             &_name {
               h6 {
@@ -305,9 +339,15 @@ $numberColor: #738793;
         }
       }
       &_item.active {
-        padding-bottom: 1.5rem;
+        //padding-bottom: 1.5rem;
       }
-      &_item.active .button a::before {
+      &_item.active a.btnShow {
+        display: none;
+      }
+      &_item.active a.btnHidde {
+        display: block;
+      }
+      &_item.active .buttonShow::before {
         transform: rotate(180deg);
       }
       &_item.active .personalArea_content_orders_item_description_group {
@@ -320,10 +360,10 @@ $numberColor: #738793;
         color: $wordsColor;
         font-size: 18px;
         font-family: "HelveticaNeueCyr-medium";
-        margin-bottom: 3rem;
+        //margin-bottom: 3rem;
       }
       .catalog_content_block_card {
-        margin-bottom: 2rem;
+        margin-bottom: 2.5rem;
         text-decoration: none;
         position: relative;
         .favorites {

@@ -18,12 +18,14 @@ $numberColor: #738793;
   &_content {
     justify-content: center;
     &_title {
-      margin-bottom: 4rem;
+      h2 {
+        margin: 0;
+      }
     }
     &_filter {
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 5rem;
+      //margin-bottom: 5rem;
       nav {
         .breadcrumb {
           margin: 0;
@@ -45,6 +47,8 @@ $numberColor: #738793;
         }
       }
       button {
+        font-family: "HelveticaNeueCyr-medium";
+        font-size: 14px;
         padding: 0.7rem 0;
         color: $ColorButton;
         border: 1px solid $ColorButton;
@@ -53,10 +57,12 @@ $numberColor: #738793;
       }
     }
     .cards {
+      padding: 0 8px;
       .catalog_content_block_card {
         margin-bottom: 2rem;
         text-decoration: none;
         position: relative;
+        //padding: 0;
         .favorites {
           position: absolute;
           z-index: 5;
@@ -66,7 +72,7 @@ $numberColor: #738793;
           background-color: transparent;
         }
         &_img {
-          padding: 100px 0;
+          padding: 100px 27px;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -94,6 +100,7 @@ $numberColor: #738793;
             font-size: 18px;
           }
           button {
+            //width: 320px;
             background-color: transparent;
             padding: 16px 0;
             display: flex;
@@ -101,6 +108,7 @@ $numberColor: #738793;
             justify-items: stretch;
             border: 1px solid $ColorButton;
             color: $ColorButton;
+            font-family: "HelveticaNeueCyr-medium";
             font-size: 14px;
             border-radius: 5px;
           }

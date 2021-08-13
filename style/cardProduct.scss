@@ -15,13 +15,22 @@ $breadcrumbColor: #959595;
 //PRODUCTCARD
 .productCard {
   background-color: $bacground;
-  padding: 0 0 6rem 0;
+
   &_content {
     .slider {
       overflow: hidden;
       position: relative;
       &_track {
         display: flex;
+        &_item {
+          min-width: 100%;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
       }
       .slider_button-next,
       .slider_button-prev {
@@ -38,11 +47,9 @@ $breadcrumbColor: #959595;
         left: 0;
       }
     }
-    .productCard_content_text {
+    &_text {
       &_top {
         border-bottom: 1px solid $ColorButton;
-        padding-bottom: 1rem;
-        margin-bottom: 1rem;
         h2 {
           font-size: 36px;
           font-family: "Cormorant", serif;
@@ -52,8 +59,9 @@ $breadcrumbColor: #959595;
         }
         p {
           font-family: "HelveticaNeueCyr-medium";
-          color: $grey;
+          color: $wordsColor;
           font-size: 16px;
+          margin: 0;
         }
       }
       &_item {
@@ -70,15 +78,17 @@ $breadcrumbColor: #959595;
           color: $wordsColor;
           font-size: 16px;
           font-weight: 550;
+          margin: 0;
         }
         p {
           font-family: "HelveticaNeueCyr-reg";
           color: $breadcrumbColor;
           font-size: 14px;
+          max-width: 85%;
         }
         a {
           position: absolute;
-          top: 50%;
+          top: 45%;
           right: 0;
           transform: translateY(-50%);
         }
@@ -86,19 +96,23 @@ $breadcrumbColor: #959595;
       h4 {
         font-family: "HelveticaNeueCyr-bold";
         color: $wordsColor;
-        margin-top: 1rem;
         font-size: 20px;
       }
       &_group {
-        margin-top: 3rem;
+        margin-top: 60px;
         display: flex;
         .num-in {
+          display: flex;
+          justify-content: space-between;
+          width: 109px;
           position: relative;
           margin-right: 1rem;
           border-radius: 5px;
           border: 1px solid $ColorButton;
           padding: 0.8rem 0.7rem;
           input {
+            font-family: "HelveticaNeueCyr-bold";
+            font-size: 16px;
             max-width: 2em;
             border: none;
             background-color: transparent;
@@ -110,6 +124,10 @@ $breadcrumbColor: #959595;
           }
         }
         button {
+          width: 200px;
+          font-size: 14px;
+          font-weight: 550;
+          border: none;
           border-radius: 5px;
           text-decoration: none;
           text-align: center;
@@ -120,10 +138,9 @@ $breadcrumbColor: #959595;
         }
       }
       .add {
-        margin-top: 2.5rem;
         color: $wordsColor;
         font-family: "HelveticaNeueCyr-reg";
-        font-size: 14px;
+        font-size: 16px;
         border: none;
         background-color: transparent;
       }

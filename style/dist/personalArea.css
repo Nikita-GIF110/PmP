@@ -1,18 +1,17 @@
 @import url("../../style/dist/style.css");
 .personalArea {
   background-color: #f4f4f2;
-  padding: 50px 0 120px 0;
 }
 .personalArea_content h2 {
-  font-size: 36px;
+  font-size: calc(26px + 10 * (100vw / 1920));
   font-family: "Cormorant", serif;
   font-weight: 500;
   color: #333333;
-  margin: 0 0 3rem 0;
+  margin: 0 0 2.5rem 0;
 }
 .personalArea_content_block_item {
-  border-top: 1px solid #dadada;
   padding: 1rem 0 1rem 0;
+  margin-right: 1rem;
 }
 .personalArea_content_block_item a {
   font-size: 16px;
@@ -27,9 +26,6 @@
 .personalArea_content_block_item.active a {
   font-weight: 700;
 }
-.personalArea_content_block_item:last-child {
-  border-bottom: 1px solid #dadada;
-}
 .personalArea_content_info {
   display: none;
 }
@@ -37,6 +33,7 @@
   font-family: "HelveticaNeueCyr-medium";
   font-size: 18px;
   color: #333333;
+  margin: 0 0 0 0;
 }
 .personalArea_content_info button {
   color: #a3a3a3;
@@ -44,18 +41,19 @@
   font-size: 14px;
   border: none;
   background-color: transparent;
-  text-align: right;
+  text-align: left;
 }
 .personalArea_content_info .passwordBtn {
   text-align: left;
 }
 .personalArea_content_info_item {
   position: relative;
-  padding: 0.5rem 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  box-sizing: content-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-bottom: 1px solid #738793;
 }
 .personalArea_content_info_item input:not(input[type=checkbox]) {
   width: 100%;
@@ -65,11 +63,12 @@
   color: #738793;
   font-size: 18px;
   margin: 0.7rem 0 0 0;
+  border-bottom: 1px solid #738793;
 }
 .personalArea_content_info_item label:not(label[for=userNotifications]) {
   position: absolute;
   top: 50%;
-  left: 0;
+  transform: translateY(-50%);
   color: #738793;
   transition: 0.1s;
 }
@@ -95,23 +94,23 @@
   margin: 0;
 }
 .personalArea_content_info_item .removeBtn {
+  padding: 0;
   visibility: hidden;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 0;
+  font-size: 9px;
 }
 .personalArea_content_info_item:hover .removeBtn {
   visibility: visible;
 }
 .personalArea_content_info .wrap-custom-checkbox {
   position: relative;
-  margin: 1.5rem 0 2rem 0;
+  display: flex;
+  align-items: center;
 }
 .personalArea_content_info .wrap-custom-checkbox input[type=checkbox] {
   visibility: hidden;
 }
 .personalArea_content_info .wrap-custom-checkbox label {
+  transform: translateX(4%);
   color: #333333;
   font-size: 14px;
   font-family: "HelveticaNeueCyr-reg";
@@ -122,9 +121,6 @@
   background-image: url("../../img/icon/checkbox.svg");
   background-repeat: no-repeat;
   background-position: center;
-  top: 50%;
-  left: 4px;
-  transform: translateY(-50%);
   opacity: 0;
   width: 7px;
   height: 6px;
@@ -134,7 +130,7 @@
   content: "";
   position: absolute;
   top: 50%;
-  left: 0;
+  left: 3%;
   transform: translateY(-50%);
   width: 15px;
   height: 15px;
@@ -144,28 +140,34 @@
 .personalArea_content_info .wrap-custom-checkbox input:checked + label::before {
   opacity: 1;
 }
-.personalArea_content_info_name {
-  margin-top: 2rem;
+.personalArea_content_info_adress .personalArea_content_info_item p:not(:first-child) {
+  max-width: 95%;
+  border-bottom: 1px solid #738793;
+  transition: 0.2s;
 }
-.personalArea_content_info_mail {
-  margin-top: 2rem;
-  margin-bottom: 4.5rem;
+.personalArea_content_info_adress .personalArea_content_info_item:hover p {
+  border-bottom: none;
 }
-.personalArea_content_info_adress {
-  margin-top: 2rem;
+.personalArea_content_info_adress .personalArea_content_info_item:hover .removeBtn {
+  visibility: visible;
 }
-.personalArea_content_orders h5 {
+.personalArea_content_orders {
+  display: block;
+}
+.personalArea_content_orders_title {
+  width: 100%;
   font-family: "HelveticaNeueCyr-medium";
   color: #333333;
   font-size: 18px;
-  margin: 0 0 1.5rem 0;
+  border-bottom: 1px solid #738793;
 }
 .personalArea_content_orders_item {
   border-bottom: 1px solid #738793;
-  margin-bottom: 1.5rem;
+  overflow: hidden;
 }
 .personalArea_content_orders_item_top {
   margin-bottom: 1.5rem;
+  justify-content: space-between;
 }
 .personalArea_content_orders_item_top h5 {
   font-family: "HelveticaNeueCyr-medium";
@@ -179,18 +181,17 @@
   font-size: 14px;
   margin-bottom: 0;
 }
-.personalArea_content_orders_item_top .button {
-  text-align: right;
+.personalArea_content_orders_item_top .button .expectedBtn {
+  color: #738793;
+}
+.personalArea_content_orders_item_top .button .cancellationBtn {
+  color: #ea4335;
 }
 .personalArea_content_orders_item_top .button button {
   background-color: transparent;
   border: none;
-  color: #ea4335;
   font-family: "HelveticaNeueCyr-reg";
   font-size: 14px;
-}
-.personalArea_content_orders_item_top .payment {
-  text-align: right;
 }
 .personalArea_content_orders_item_top .payment h5 {
   font-family: "HelveticaNeueCyr-medium";
@@ -228,6 +229,7 @@
   padding: 1rem 0;
   border-top: 1px solid #dadada;
   border-bottom: 1px solid #dadada;
+  justify-content: space-between;
 }
 .personalArea_content_orders_item_description_top h5 {
   font-family: "HelveticaNeueCyr-reg";
@@ -235,23 +237,25 @@
   color: #333333;
   margin-bottom: 0;
 }
-.personalArea_content_orders_item_description_top .button {
+.personalArea_content_orders_item_description_top .buttonShow {
   text-align: right;
+  position: relative;
 }
-.personalArea_content_orders_item_description_top .button a {
+.personalArea_content_orders_item_description_top .buttonShow .btnHidde {
+  display: none;
+}
+.personalArea_content_orders_item_description_top .buttonShow a {
   position: relative;
   text-decoration: none;
   font-family: "HelveticaNeueCyr-reg";
   font-size: 14px;
   color: #333333;
-  margin-right: 1rem;
+  margin-right: 2rem;
 }
-.personalArea_content_orders_item_description_top .button a::before {
+.personalArea_content_orders_item_description_top .buttonShow::before {
   content: "";
   position: absolute;
   top: 50%;
-  right: -1.5rem;
-  transform: translateY(-50%);
   background-image: url("../../img/icon/personalAreaArrow.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -260,7 +264,6 @@
   transition: 0.3s;
 }
 .personalArea_content_orders_item_description_group {
-  margin-top: 1.5rem;
   display: none;
 }
 .personalArea_content_orders_item_description_group_name h6 {
@@ -278,10 +281,13 @@
   font-weight: 550;
   color: #333333;
 }
-.personalArea_content_orders_item.active {
-  padding-bottom: 1.5rem;
+.personalArea_content_orders_item.active a.btnShow {
+  display: none;
 }
-.personalArea_content_orders_item.active .button a::before {
+.personalArea_content_orders_item.active a.btnHidde {
+  display: block;
+}
+.personalArea_content_orders_item.active .buttonShow::before {
   transform: rotate(180deg);
 }
 .personalArea_content_orders_item.active .personalArea_content_orders_item_description_group {
@@ -294,10 +300,9 @@
   color: #333333;
   font-size: 18px;
   font-family: "HelveticaNeueCyr-medium";
-  margin-bottom: 3rem;
 }
 .personalArea_content_catalog .catalog_content_block_card {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   text-decoration: none;
   position: relative;
 }

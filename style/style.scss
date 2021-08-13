@@ -46,7 +46,10 @@ $breadcrumbColor: #959595;
 
 .wrap {
   overflow-x: hidden;
+  position: relative;
+  background-color: $bacground;
 }
+
 //MODAL
 .modalWindow {
   position: fixed;
@@ -60,14 +63,17 @@ $breadcrumbColor: #959595;
   opacity: 0;
   transition: 0.3s;
   &_content {
-    width: 40%;
     background-color: $bacground;
-    padding: 8rem 7rem 2rem 7rem;
     height: 100%;
     position: relative;
     transform: translateX(-120%);
     transition: 0.3s;
     transition-delay: 0.3s;
+    overflow-y: auto;
+    button {
+      border: 1px solid transparent;
+      box-sizing: border-box;
+    }
     &_btn {
       button {
         border-radius: 5px;
@@ -82,6 +88,7 @@ $breadcrumbColor: #959595;
       button:hover {
         background-color: transparent;
         color: $ColorButton;
+        border: 1px solid $ColorButton;
       }
       button:first-child {
         margin: 0 1rem 0 0;
@@ -94,7 +101,7 @@ $breadcrumbColor: #959595;
         border-bottom: 1px solid $backgroundStockInfo;
         padding: 0 0 0.4rem 0;
         margin: 1rem 0 0 0;
-        width: 80%;
+        //width: 80%;
         input:focus + label {
           top: -65%;
           transform: scale(0.8);
@@ -125,7 +132,7 @@ $breadcrumbColor: #959595;
         }
       }
       button {
-        margin: 3rem 0 2rem 0;
+        font-size: 14px;
         border-radius: 5px;
         text-decoration: none;
         text-align: center;
@@ -148,20 +155,16 @@ $breadcrumbColor: #959595;
     }
     .modalClose {
       position: absolute;
-      top: 2rem;
-      right: 2rem;
     }
     h2 {
-      font-size: 36px;
+      font-size: calc(26px + 10 * (100vw / 1920));
       font-family: "Cormorant", serif;
       font-weight: 500;
       color: $wordsColor;
       border-bottom: 1px solid $ColorButton;
-      padding: 0 0 2rem 0;
-      margin-bottom: 3rem;
     }
     .toPrepare {
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
       padding-bottom: 1rem;
       border-bottom: 1px solid #dadada;
       p {
@@ -192,11 +195,11 @@ $breadcrumbColor: #959595;
     }
     .block-checkbox {
       display: flex;
-      justify-content: space-between;
       margin-bottom: 3rem;
       .wrap-checkbox {
         .wrap-custom-checkbox {
           position: relative;
+          margin-bottom: 1rem;
           input[type="checkbox"] {
             visibility: hidden;
           }
@@ -240,8 +243,7 @@ $breadcrumbColor: #959595;
     .block-select {
       .wrap-select {
         position: relative;
-        width: 60%;
-        margin-bottom: 2rem;
+        //width: 60%;
         .select {
           width: 100%;
           padding: 13px 20px;
@@ -307,7 +309,7 @@ $breadcrumbColor: #959595;
   }
 }
 .breadcrumb {
-  margin-bottom: 5rem;
+  //margin: 2rem 0;
   .breadcrumb-list {
     list-style-type: none;
     display: flex;
@@ -328,14 +330,49 @@ $breadcrumbColor: #959595;
     }
   }
 }
+.mMenu {
+  position: absolute;
+  top: 0;
+  left: -120%;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  background-color: $bacground;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  &_list {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    &_navigation {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      a {
+        text-decoration: none;
+        font-family: "HelveticaNeueCyr-reg";
+        font-size: 16px;
+        color: $wordsColor;
+        text-align: center;
+      }
+    }
+  }
+}
+.mMenu.active {
+  left: 0;
+}
 //HEADER
 .header {
+  position: relative;
   background-color: $white;
   padding: 35px 0;
   align-items: center;
-  justify-content: space-between;
   &_content {
     justify-content: space-between;
+    position: relative;
     &_logo {
       a {
         text-decoration: none;
@@ -344,6 +381,7 @@ $breadcrumbColor: #959595;
     &_navigation {
       display: flex;
       justify-content: space-between;
+      align-items: flex-end;
       a {
         text-decoration: none;
         font-family: "HelveticaNeueCyr-reg";
@@ -353,17 +391,20 @@ $breadcrumbColor: #959595;
     }
     &_user {
       display: flex;
-      position: relative;
+      justify-content: flex-end;
+      align-items: center;
       &_search {
         display: flex;
-        align-items: center;
-        margin-right: 35px;
+        align-items: flex-end;
+        margin-right: 1.5rem;
         input[type="search"] {
           border: 1px solid $ColorButton;
           outline: none;
           visibility: hidden;
           opacity: 0;
           transition: 0.3s;
+          border: none;
+          border-bottom: 1px solid $borderColor;
         }
         button {
           display: flex;
@@ -382,15 +423,43 @@ $breadcrumbColor: #959595;
       }
       &_block {
         display: flex;
-        align-items: center;
+        align-items: flex-end;
+        .mMenu_btn {
+          position: relative;
+          display: flex;
+          align-items: center;
+          width: 20px;
+          height: 20px;
+          cursor: pointer;
+          span {
+            position: relative;
+            width: 20px;
+            height: 1.5px;
+            display: block;
+            background-color: #8f8f8f;
+          }
+          span::before,
+          span::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 20px;
+            width: 20px;
+            height: 1.5px;
+            background-color: #8f8f8f;
+          }
+          span::before {
+            top: 7px;
+          }
+          span::after {
+            bottom: 7px;
+          }
+        }
         a {
           margin-right: 35px;
           border: none;
           outline: none;
           background-color: transparent;
-          display: flex;
-          justify-content: center;
-          align-items: center;
           text-decoration: none;
         }
         a:last-child {
@@ -421,7 +490,7 @@ $breadcrumbColor: #959595;
     z-index: 2;
     &_img {
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
       img {
         max-width: 100%;
@@ -484,9 +553,11 @@ $breadcrumbColor: #959595;
         h2 {
           font-family: "HelveticaNeueCyr-reg";
           color: $wordsColor;
-          font-size: calc(20px + 16 * (100vw / 1920));
+          font-size: calc(20px + 6 * (100vw / 1920));
         }
         a {
+          text-align: center;
+          font-size: 14px;
           border-radius: 5px;
           font-family: "HelveticaNeueCyr-medium";
           padding: 0.8rem 3rem;
@@ -545,7 +616,7 @@ $breadcrumbColor: #959595;
                 background-color: transparent;
               }
               &_img {
-                padding: 100px 0;
+                padding: 100px 28px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -603,24 +674,27 @@ $breadcrumbColor: #959595;
 }
 //ABOUT
 .about {
+  padding: 50px 0;
+  min-height: 600px;
   background-color: $bacground;
   position: relative;
   &_content {
-    min-height: 610px;
     h2 {
       font-family: "Cormorant", serif;
       font-weight: 500;
       font-size: 36px;
       color: $wordsColor;
+      display: flex;
+      align-items: flex-end;
     }
     &_description {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: flex-start;
       p {
-        font-size: 14px;
-        font-family: "HelveticaNeueCyr-medium";
+        font-size: 16px;
+        font-family: "HelveticaNeueCyr-reg";
         color: $wordsColor;
       }
       a {
@@ -628,21 +702,12 @@ $breadcrumbColor: #959595;
         text-decoration: none;
         text-align: center;
         color: $white;
+        font-size: 14px;
         font-family: "HelveticaNeueCyr-medium";
         background-color: $ColorButton;
         padding: 15px 23px;
         margin-top: 3rem;
-      }
-    }
-    &_img {
-      display: flex;
-      align-items: stretch;
-      img {
-        max-width: 100%;
-        height: auto;
-        object-fit: cover;
-        position: absolute;
-        right: 0;
+        max-width: 200px;
       }
     }
   }
@@ -652,16 +717,23 @@ $breadcrumbColor: #959595;
   background-color: $bacground;
   position: relative;
   overflow: hidden;
-  padding: 75px 0 150px 0;
   &_content {
+    h2 {
+      font-family: "Cormorant", serif;
+      font-weight: 500;
+      font-size: 36px;
+      color: $wordsColor;
+      display: flex;
+      align-items: flex-end;
+    }
     &_img {
       display: flex;
-      justify-content: center;
       img {
-        max-width: 100%;
-        height: auto;
         object-fit: cover;
       }
+    }
+    .imgLeft {
+      object-fit: cover;
     }
     &_description {
       &_card {
@@ -678,20 +750,10 @@ $breadcrumbColor: #959595;
       }
     }
   }
-  .imgLeft {
-    position: absolute;
-    right: 0;
-    bottom: 150px;
-    width: 40vw;
-    height: 60vh;
-    object-fit: cover;
-  }
 }
 //RESULT
 .result {
   background-color: $resultBacground;
-  padding: 90px 0;
-
   &_content {
     position: relative;
     &_description {
@@ -707,6 +769,9 @@ $breadcrumbColor: #959595;
         font-size: 14px;
       }
       a {
+        display: block;
+        width: 200px;
+        font-size: 14px;
         border-radius: 5px;
         text-decoration: none;
         text-align: center;
@@ -721,12 +786,12 @@ $breadcrumbColor: #959595;
 //CALLBACK
 .callBack {
   background-color: $bacground;
-  //padding: 9.5rem 0 6rem 0;
   position: relative;
   &_img {
     img {
       object-fit: cover;
       width: 50vw;
+      height: 70vh;
       position: absolute;
       top: 50%;
       left: 0;
@@ -736,7 +801,9 @@ $breadcrumbColor: #959595;
   &_content {
     justify-content: flex-end;
     &_form {
-      //min-height: 650px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       h2 {
         font-family: "Cormorant", serif;
         font-weight: 500;
@@ -756,12 +823,13 @@ $breadcrumbColor: #959595;
           }
           label {
             position: absolute;
+
             top: 50%;
             left: 0;
             transform: translateY(-50%);
             transition: 0.1s;
             color: $borderColor;
-            font-size: 20.3333px;
+            font-size: 18px;
           }
           input,
           textarea {
@@ -786,6 +854,10 @@ $breadcrumbColor: #959595;
             color: $borderColor;
           }
           .button {
+            display: block;
+            border: none;
+            width: 200px;
+            font-size: 14px;
             align-self: flex-start;
             border-radius: 5px;
             text-decoration: none;
@@ -802,6 +874,7 @@ $breadcrumbColor: #959595;
           }
           p {
             color: #a3a3a3;
+            font-size: 14px;
             a {
               color: #a3a3a3;
             }
@@ -814,10 +887,11 @@ $breadcrumbColor: #959595;
 //FOOTER
 .footer {
   position: relative;
-  padding: 40px 0;
+  //padding: 40px 0;
   background-color: $white;
   &_content {
     //justify-content: space-between;
+
     &_subscription {
       p {
         font-size: 16px;
@@ -842,7 +916,7 @@ $breadcrumbColor: #959595;
         button {
           position: absolute;
           top: 50%;
-          right: 20px;
+          //right: 20px;
           transform: translateY(-50%);
           border: none;
           outline: none;
@@ -851,15 +925,19 @@ $breadcrumbColor: #959595;
       }
     }
     &_navigation {
+      flex-wrap: wrap;
       a {
+        font-size: 20px;
         text-decoration: none;
         color: $wordsColor;
         font-family: "HelveticaNeueCyr-reg";
+        display: flex;
+        flex-wrap: nowrap;
       }
     }
     &_social {
       h4 {
-        text-align: right;
+        //text-align: right;
         color: $wordsColor;
         font-size: 18px;
         font-family: "HelveticaNeueCyr-medium";
@@ -867,17 +945,19 @@ $breadcrumbColor: #959595;
       &_group {
         a {
           position: relative;
-          text-align: right;
+          //text-align: right;
           text-decoration: none;
           font-family: "HelveticaNeueCyr-reg";
           font-size: 14px;
           color: $wordsColor;
+          display: flex;
+          flex-wrap: nowrap;
         }
         a::before {
-          content: "";
+          //content: "";
           position: absolute;
           top: 50%;
-          right: -16px;
+          //right: -16px;
           transform: translateY(-50%);
           width: 9px;
           height: 9px;
@@ -889,7 +969,7 @@ $breadcrumbColor: #959595;
     }
     &_logo {
       position: relative;
-      padding-top: 30px;
+      //padding-top: 30px;
       &_group {
         justify-content: space-between;
         a {
@@ -900,12 +980,15 @@ $breadcrumbColor: #959595;
           color: $wordsColor;
         }
         p {
-          text-align: right;
+          //text-align: right;
           font-size: 14px;
           font-family: "HelveticaNeueCyr-reg";
           color: $wordsColor;
         }
       }
+    }
+    &_mLogo {
+      display: block;
     }
   }
 }
@@ -922,16 +1005,15 @@ $breadcrumbColor: #959595;
 //DELEVIRY
 .deliveryMain {
   background-color: $bacground;
-  padding: 50px 0 125px 0;
   &_content {
     h2 {
       font-family: "Cormorant", serif;
       font-weight: 500;
-      font-size: 36px;
+      font-size: calc(26px + 10 * (100vw / 1920));
       color: $wordsColor;
     }
     &_block {
-      margin: 3rem 0 0 0;
+      margin: 2rem 0 0 0;
       h5 {
         font-family: "HelveticaNeueCyr-medium";
         font-weight: 550;
@@ -947,7 +1029,7 @@ $breadcrumbColor: #959595;
         font-size: 14px;
       }
       &_img {
-        display: flex;
+        //display: flex;
         justify-content: space-between;
       }
     }
@@ -958,24 +1040,23 @@ $breadcrumbColor: #959595;
   position: relative;
   background-color: $bacground;
   padding: 50px 0 120px 0;
-  img {
+  .imgDesctop {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     right: 0;
     width: 40vw;
-    height: 50vh;
+    height: 40vh;
     object-fit: cover;
   }
   &_content {
     h2 {
-      font-size: 36px;
+      font-size: calc(26px + 10 * (100vw / 1920));
       font-family: "Cormorant", serif;
       font-weight: 500;
       color: $wordsColor;
     }
     &_block {
-      margin: 3rem 0 0 0;
       &_card {
         margin: 1.8rem 0 0 0;
         p {

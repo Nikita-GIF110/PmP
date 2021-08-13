@@ -54,6 +54,7 @@ $numberColor: #738793;
   padding: 50px 0 0 0;
   &_content {
     h2 {
+      font-size: calc(26px + 10 * (100vw / 1920));
       font-family: "Cormorant", serif;
     }
     p {
@@ -66,7 +67,7 @@ $numberColor: #738793;
 //IMG
 .img {
   position: relative;
-  padding: 7rem 0 0 0;
+  //padding: 7rem 0 0 0;
   background-color: $bacground;
   img {
     width: 100vw;
@@ -75,7 +76,7 @@ $numberColor: #738793;
 //actionPrinciple
 .actionPrinciple {
   background-color: $bacground;
-  padding: 150px 0;
+  //padding: 150px 0;
   &_content {
     h2 {
       font-family: "Cormorant", serif;
@@ -106,8 +107,12 @@ $numberColor: #738793;
             font-family: "HelveticaNeueCyr-reg";
             font-size: 14px;
             color: $wordsColor;
+            margin-bottom: 0;
           }
         }
+      }
+      &_card:first-child {
+        margin-bottom: 120px;
       }
     }
   }
@@ -123,19 +128,24 @@ $numberColor: #738793;
       font-weight: 500;
       color: $wordsColor;
     }
+    p {
+      font-family: "HelveticaNeueCyr-reg";
+      font-size: 14px;
+      color: $wordsColor;
+    }
     &_text {
       margin-bottom: 100px;
-      p {
-        font-family: "HelveticaNeueCyr-reg";
-        font-size: 14px;
-        color: $wordsColor;
-      }
-      h2 {
-        font-family: "Cormorant", serif;
-        font-size: 96px;
-        color: $numberColor;
+      &_number {
+        &_top {
+          h2 {
+            font-family: "Cormorant", serif;
+            font-size: 96px;
+            color: $numberColor;
+          }
+        }
       }
       img {
+        transform: translateY(-10px);
         max-width: 100%;
         height: auto;
         object-fit: cover;
@@ -163,12 +173,49 @@ $numberColor: #738793;
   padding-bottom: 150px;
   &_content {
     &_top {
-      margin-bottom: 4.5rem;
+      //margin-bottom: 4.5rem;
       h2 {
         font-size: 36px;
         font-family: "Cormorant", serif;
         font-weight: 500;
         color: $wordsColor;
+      }
+    }
+    .slider {
+      position: relative;
+      &-button {
+        .btn-prev,
+        .btn-next {
+          border: none;
+          background-color: transparent;
+          outline: none;
+          padding: 0;
+        }
+        .btn-prev {
+          margin-right: 2rem;
+        }
+      }
+      &-track {
+        display: flex;
+        overflow: hidden;
+        &-item {
+          display: flex;
+          &-card {
+            &-img {
+              margin-bottom: 1rem;
+              img {
+                object-fit: cover;
+              }
+            }
+            &-description {
+              p {
+                color: $wordsColor;
+                font-family: "HelveticaNeueCyr-reg";
+                font-size: 16px;
+              }
+            }
+          }
+        }
       }
     }
   }

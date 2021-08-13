@@ -1,5 +1,37 @@
 @import url("../../style/dist/style.css");
 @import url("../../style/dist/about.css");
+.productInfo {
+  position: relative;
+}
+.productInfo_content h2 {
+  font-size: 36px;
+  font-family: "Cormorant", serif;
+  font-weight: 500;
+  color: #333333;
+}
+.productInfo_content .buyTitle {
+  font-size: 24px;
+}
+.productInfo_content_description p {
+  font-family: "HelveticaNeueCyr-reg";
+  font-size: 16px;
+  color: #333333;
+}
+.productInfo_content_description a {
+  display: block;
+  border: none;
+  width: 200px;
+  font-size: 14px;
+  align-self: flex-start;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  font-family: "HelveticaNeueCyr-medium";
+  background-color: #534e60;
+  padding: 15px 23px;
+}
+
 .aboutProduct {
   background-color: #f4f4f2;
 }
@@ -14,6 +46,9 @@
   font-family: "HelveticaNeueCyr-reg";
   font-size: 14px;
   color: #333333;
+}
+.aboutProduct_content_block {
+  flex-wrap: nowrap;
 }
 .aboutProduct_content_block_card_img img {
   max-width: 100%;

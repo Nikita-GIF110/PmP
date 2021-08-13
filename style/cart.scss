@@ -16,20 +16,23 @@ $numberColor: #738793;
   background-color: $bacground;
   padding: 2.5rem 0 7.5rem 0;
   &_content {
-    h2 {
-      font-family: "Cormorant", serif;
-      font-weight: 500;
-      font-size: 36px;
-      color: $wordsColor;
+    &_title {
+      h2 {
+        font-family: "Cormorant", serif;
+        font-weight: 500;
+        font-size: calc(26px + 10 * (100vw / 1920));
+        color: $wordsColor;
+        margin: 0;
+      }
     }
     &_cart {
-      margin: 3rem 0 0 0;
       justify-content: center;
       &_top {
         justify-content: space-between;
         border-bottom: 1px solid $ColorButton;
-        padding: 0 0 1rem 0;
+        padding-bottom: 1rem;
         h6 {
+          margin: 3rem 0 0 0;
           font-family: "HelveticaNeueCyr-medium";
           color: $wordsColor;
           font-size: 16px;
@@ -39,12 +42,24 @@ $numberColor: #738793;
         }
       }
       &_info {
+        position: relative;
         justify-content: space-between;
         align-items: center;
         border-bottom: 1px solid #dadada;
-        margin: 1.5rem 0 1.5rem 0;
-        height: 5rem;
+        //margin: 1.5rem 0 1.5rem 0;
+        //height: 5rem;
+        //padding: 1.5rem 0;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
         cursor: pointer;
+        button {
+          position: absolute;
+          font-family: "HelveticaNeueCyr-reg";
+          color: $wordsColor;
+          font-size: 14px;
+          border: none;
+          background-color: transparent;
+        }
         h6 {
           font-size: 18px;
           margin: 0;
@@ -58,65 +73,52 @@ $numberColor: #738793;
           font-size: 14px;
           margin: 0 0 0 0;
         }
-        p:first-child {
+        h5 {
           font-family: "HelveticaNeueCyr-reg";
           color: $wordsColor;
-          font-size: 14px;
+          font-size: 16px;
         }
         .select {
           position: relative;
           display: flex;
           justify-content: space-between;
-          select {
+          &-wrap {
             position: relative;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-            border: 1px solid $breadcrumbColor;
-            border-radius: 5px;
-            width: 100px;
-            height: 40px;
-            padding: 0.7rem 1rem;
-            outline: none;
-            font-family: "HelveticaNeueCyr-reg";
-            color: $wordsColor;
-            font-size: 14px;
-            cursor: pointer;
-          }
-          label {
-            position: absolute;
-            top: 50%;
-            left: 45%;
-            transform: translateY(-50%);
-          }
-          button {
-            position: absolute;
-            z-index: -1;
-            top: 50%;
-            transform: translateY(-50%);
-            right: -30%;
-            font-family: "HelveticaNeueCyr-reg";
-            color: $wordsColor;
-            font-size: 14px;
-            border: none;
-            background-color: transparent;
-            visibility: hidden;
+            width: 50%;
+            select {
+              max-width: 100%;
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              appearance: none;
+              border: 1px solid $breadcrumbColor;
+              border-radius: 5px;
+              width: 100px;
+              height: 40px;
+              padding: 0.7rem 1rem;
+              outline: none;
+              font-family: "HelveticaNeueCyr-reg";
+              color: $wordsColor;
+              font-size: 14px;
+              cursor: pointer;
+            }
+            label {
+              position: absolute;
+              top: 50%;
+              right: 20%;
+              transform: translateY(-50%);
+            }
           }
         }
-      }
-      &_info:hover button {
-        visibility: visible;
-        z-index: 6;
       }
       &_payment {
         justify-content: flex-end;
         &_block {
           display: flex;
+          flex-wrap: wrap;
           justify-content: space-between;
           align-items: center;
           border-bottom: 1px solid #dadada;
-          margin: 0 0 1.5rem 0;
-          height: 5rem;
+          padding: 1.5rem 0;
           button {
             border: none;
             background-color: transparent;
@@ -135,15 +137,17 @@ $numberColor: #738793;
             font-size: 14px;
           }
           p {
+            max-width: 60%;
             font-family: "HelveticaNeueCyr-reg";
-            color: $breadcrumbColor;
+            color: $wordsColor;
             font-size: 14px;
+            margin: 0;
           }
         }
       }
       &_button {
         justify-content: flex-end;
-        margin: 4rem 0 0 0;
+        margin: 2rem 0 0 0;
         &_block {
           button {
             margin: 0 0 1rem 0;

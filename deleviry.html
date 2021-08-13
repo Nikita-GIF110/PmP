@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style/normalize.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="style/dist/style.css">
+  <link rel="stylesheet" href="style/dist/media.css">
   <title>PmP</title>
 </head>
 <body>
@@ -15,29 +16,42 @@
       <p class="col-4">Информация о какой нибудь акции или любая другая информация</p>
       <a href="#"><img src="img/icon/newsClose.svg" alt="закрыть"></a>
     </div>
-    <header class="header">
-      <div class="container">
-        <div class="row header_content">
-          <div class="col-1 header_content_logo">
-            <a href="index.html"><img src="img/icon/pmpLogo.svg" alt="ПМП - Терапия"></a>
-          </div>
-          <nav class="col-6 header_content_navigation">
+     <div class="mMenu">
+        <div class="mMenu_list">
+          <nav class="mMenu_list_navigation">
             <a href="about.html">О продукте</a>
             <a href="catalog.html">Каталог</a>
             <a href="deleviry.html">Доставка и возврат</a>
             <a href="contacts.html">Контакты</a>
           </nav>
-          <div class="col-3 header_content_user">
+        </div>
+      </div>
+    <header class="header">
+      <div class="container"> 
+        <div class="row header_content">
+          <div class="col-1 header_content_logo">
+            <a href="index.html"><img src="img/icon/pmpLogo.svg" alt="ПМП - Терапия"></a>
+          </div>
+          <nav class="col-5 offset-1 header_content_navigation">
+            <a href="about.html">О продукте</a>
+            <a href="catalog.html">Каталог</a>
+            <a href="deleviry.html">Доставка и возврат</a>
+            <a href="contacts.html">Контакты</a>
+          </nav>
+          <div class="col-6 col-lg-4 header_content_user">
             <div class="header_content_user_search">
               <input type="search" placeholder="Поиск">
               <button type="button"><img src="img/icon/search.svg" alt="Поиск"></button>
             </div>
             <div class="header_content_user_block">
-              <a href="#"><img src="img/icon/user.svg" alt="Личный кабинет"></a>
+              <a href="personalArea.html"><img src="img/icon/user.svg" alt="Личный кабинет"></a>
               <a href="cart.html"><img src="img/icon/cart.svg" alt="Корзина Пользователя"></a>
+              <div class="mMenu_btn">
+                <span></span>
+              </div>
             </div>
           </div>
-        </div>
+        </div> 
       </div>    
     </header>
     <div class="deliveryMain">
@@ -51,34 +65,34 @@
             </nav>
           <h2>Доставка и возврат</h2>
           <div class="row">
-            <div class="col-9 deliveryMain_content_block">
+            <div class="col-12 col-lg-9 deliveryMain_content_block">
               <h5>Доставка</h5>
-              <p class="col-9">
+              <p class="col-12 col-lg-9">
                 Мы доставляем заказы по всей России.
               </p>
-              <p class="col-9">
+              <p class="col-12 col-lg-9">
                 Стоимость доставки курьером, Почтой России и в пункты самовывоза компании СДЭК зависит от адреса доставки.
               </p>
-              <p class="col-9">
+              <p class="col-12 col-lg-9">
                 Крупногабаритные товары доставляются только в Санкт-Петербург и в Ленинградскую область. Условия доставки крупногабаритных товаров уточняйте у операторов.
               </p>
             </div>
-             <div class="col-9 deliveryMain_content_block">
+             <div class="col-12 col-lg-9 deliveryMain_content_block">
               <h5>Возврат</h5>
-              <p class="col-9">
+              <p class="col-12 col-lg-9">
                Tortor tempus, eu quam arcu, sit donec. Consectetur cras vitae at arcu eget. Magna in rutrum dictum pellentesque quis mi, iaculis. Pulvinar enim justo eget eget tellus consectetur.
               </p>
-              <p class="col-9">
+              <p class="col-12 col-lg-9">
                 Accumsan vitae tincidunt non, posuere turpis scelerisque egestas tellus malesuada.
               </p>
             </div>
-             <div class="col-9 deliveryMain_content_block">
+             <div class="col-12 col-lg-9 deliveryMain_content_block">
               <h5>Оплата</h5>
-              <p class="col-9">
+              <p class="col-12 col-lg-9">
                 Возможна только онлайн оплата. Мы принимаем:
               </p>
               <div class="row">
-                <div class="col-7 deliveryMain_content_block_img">
+                <div class="col-7 deliveryMain_content_block_img imgDesctop">
                   <img src="img/icon/visaLogo.svg" alt="">
                   <img src="img/icon/mirLogo.svg" alt="">
                   <img src="img/icon/masterCardLogo.svg" alt="">
@@ -87,45 +101,54 @@
                   <img src="img/icon/googlePayLogo.svg" alt="">
                   <img src="img/icon/applePayLogo.svg" alt="">
                 </div>
+                <div class="col-6 col-lg-5 deliveryMain_content_block_img imgMobile">
+                  <img src="img/icon/applePay.svg" alt="">
+                  <img src="img/icon/googlePay.svg" alt="">
+                  <img src="img/icon/masterCard.svg" alt="">
+                  <img src="img/icon/visa.svg" alt="">
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <footer class="footer">
-      <div class="container">
+   <footer class="footer">
+      <div class="container-fluid">
         <div class="row footer_content">
-          <div class="col-4 footer_content_subscription">
+          <div class="col-12 mb-3 footer_content_mLogo">
+            <img src="img/icon/pmpLogo.svg" alt="ПМП - Терапия">
+          </div>
+          <div class="col-12 mb-5 col-lg-3 footer_content_subscription">
             <p class="mb-4">Оформите подписку, чтобы получить скидку 10% на первый заказ и быть в курсе всех акций!</p>
             <div class="footer_content_subscription_item">
               <input type="email" placeholder="Ваш Email">
               <button type="button"><img src="img/icon/footerButtonArrow.svg" alt=""></button>
             </div>
           </div>
-          <nav class="col-4 footer_content_navigation">
+          <nav class="col-12 mb-3 col-lg-5 offset-lg-1 footer_content_navigation">
             <div class="row">
-              <a href="#" class="col-5 offset-1">О продукте</a>
-              <a href="#" class="col-5">Доставка и возврат</a>
-              <a href="#" class="col-5 offset-1">Каталог</a>
-              <a href="#" class="col-5">Контакты</a>
+              <a href="#" class="col-4 mb-2">О продукте</a>
+              <a href="#" class="col-6 mb-2">Доставка и возврат</a>
+              <a href="#" class="col-4">Каталог</a>
+              <a href="#" class="col-6">Контакты</a>
             </div>
           </nav>
-          <div class="col-3 footer_content_social">
+          <div class="col-9 mb-3 col-lg-3 footer_content_social">
             <div class="row">
-              <h4 class="col-12">Мы в социальных сетях</h4>
+              <h4 class="col-12 p-lg-0">Мы в социальных сетях</h4>
             </div>
             <div class="row footer_content_social_group">
-              <a href="#" class="col-3 mx-3 p-0">Instagram</a>
-              <a href="#" class="col-3 mx-3 p-0">Facebook</a>
-              <a href="#" class="col-2 mx-3 p-0">VK</a>
+              <a href="#" class="col-4">Instagram <img src="img/icon/arrowSocial.svg" alt=""></a>
+              <a href="#" class="col-4">Facebook <img src="img/icon/arrowSocial.svg" alt=""></a>
+              <a href="#" class="col-3">VK <img src="img/icon/arrowSocial.svg" alt=""></a>
             </div>
           </div>
-          <div class="col-12 mt-5 footer_content_logo">
+          <div class="col-12 mt-lg-5 footer_content_logo">
             <div class="row footer_content_logo_group">
-              <a href="#" class="col-3">Политика конфиденциальности</a>
+              <a href="#" class="col-12 col-lg-3">Политика конфиденциальности</a>
               <img class="col-1" src="img/icon/pmpLogo.svg" alt="ПМП - Терапия">
-              <p class="col-2">Сайт сделан в RA-Studio</p>
+              <p class="col-12 col-lg-2">Сайт сделан в RA-Studio</p>
             </div>
           </div>
         </div>

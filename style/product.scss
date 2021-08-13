@@ -13,6 +13,41 @@ $borderColor: #9e9e9e;
 $breadcrumbColor: #959595;
 $numberColor: #738793;
 
+.productInfo {
+  position: relative;
+  &_content {
+    h2 {
+      font-size: 36px;
+      font-family: "Cormorant", serif;
+      font-weight: 500;
+      color: $wordsColor;
+    }
+    .buyTitle {
+      font-size: 24px;
+    }
+    &_description {
+      p {
+        font-family: "HelveticaNeueCyr-reg";
+        font-size: 16px;
+        color: $wordsColor;
+      }
+      a {
+        display: block;
+        border: none;
+        width: 200px;
+        font-size: 14px;
+        align-self: flex-start;
+        border-radius: 5px;
+        text-decoration: none;
+        text-align: center;
+        color: #fff;
+        font-family: "HelveticaNeueCyr-medium";
+        background-color: $ColorButton;
+        padding: 15px 23px;
+      }
+    }
+  }
+}
 //ABOUTPRODUCT
 .aboutProduct {
   background-color: $bacground;
@@ -30,6 +65,7 @@ $numberColor: #738793;
       color: $wordsColor;
     }
     &_block {
+      flex-wrap: nowrap;
       &_card {
         &_img {
           img {
