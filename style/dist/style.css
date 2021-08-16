@@ -639,7 +639,7 @@
 .about_content_description {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
 }
 .about_content_description p {
@@ -658,6 +658,9 @@
   padding: 15px 23px;
   margin-top: 3rem;
   max-width: 200px;
+}
+.about_content_imgMobile{
+  padding-left: 2.5rem;
 }
 
 .action {
@@ -729,8 +732,7 @@
 }
 .callBack_img img {
   object-fit: cover;
-  width: 50vw;
-  height: 70vh;
+  width: 46.5vw;
   position: absolute;
   top: 50%;
   left: 0;
@@ -955,12 +957,7 @@
   padding: 50px 0 120px 0;
 }
 .conatctsMain .imgDesctop {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   right: 0;
-  width: 40vw;
-  height: 40vh;
   object-fit: cover;
 }
 .conatctsMain_content h2 {

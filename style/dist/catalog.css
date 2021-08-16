@@ -7,21 +7,30 @@
   margin: 0;
 }
 .mainDescription_content_filter {
+  display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 .mainDescription_content_filter nav .breadcrumb {
+  display: flex;
   margin: 0;
   justify-content: space-between;
 }
+.mainDescription_content_filter nav .breadcrumb .breadcrumb-item{
+  margin-right: 0.9rem;
+}
 .mainDescription_content_filter nav .breadcrumb .breadcrumb-item a {
+  display: flex;
+  width: 126px;
   font-family: "HelveticaNeueCyr-reg";
   font-size: 16px;
   color: #333333;
-  padding-right: 1.5rem;
   border-right: 1px solid #333333;
 }
 .mainDescription_content_filter nav .breadcrumb .breadcrumb-item.active {
+  text-align: center;
+  width: 110px;
   font-family: "HelveticaNeueCyr-reg";
   font-size: 16px;
   color: #333333;
