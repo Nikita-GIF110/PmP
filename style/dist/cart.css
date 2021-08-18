@@ -1,12 +1,11 @@
 @import url("../../style/dist/style.css");
+
 .mainInfo {
   background-color: #f4f4f2;
-  padding: 2.5rem 0 7.5rem 0;
 }
 .mainInfo_content_title h2 {
   font-family: "Cormorant", serif;
   font-weight: 500;
-  font-size: calc(26px + 10 * (100vw / 1920));
   color: #333333;
   margin: 0;
 }
@@ -16,10 +15,8 @@
 .mainInfo_content_cart_top {
   justify-content: space-between;
   border-bottom: 1px solid #534e60;
-  padding-bottom: 1rem;
 }
 .mainInfo_content_cart_top h6 {
-  margin: 3rem 0 0 0;
   font-family: "HelveticaNeueCyr-medium";
   color: #333333;
   font-size: 16px;
@@ -32,8 +29,6 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #dadada;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
   cursor: pointer;
 }
 .mainInfo_content_cart_info button {
@@ -55,12 +50,12 @@
   font-family: "HelveticaNeueCyr-reg";
   color: #959595;
   font-size: 14px;
-  margin: 0 0 0 0;
+  margin: 0;
 }
 .mainInfo_content_cart_info h5 {
   font-family: "HelveticaNeueCyr-reg";
   color: #333333;
-  font-size: 16px;
+  margin: 0;
 }
 .mainInfo_content_cart_info .select {
   position: relative;
@@ -69,7 +64,7 @@
 }
 .mainInfo_content_cart_info .select-wrap {
   position: relative;
-  width: 50%;
+  width: 100px
 }
 .mainInfo_content_cart_info .select-wrap select {
   max-width: 100%;
@@ -102,7 +97,6 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #dadada;
-  padding: 1.5rem 0;
 }
 .mainInfo_content_cart_payment_block button {
   border: none;
@@ -113,16 +107,15 @@
   font-family: "HelveticaNeueCyr-medium";
   color: #333333;
   font-size: 18px;
-  margin: 0 0 0 0;
 }
 .mainInfo_content_cart_payment_block h6 {
   font-family: "HelveticaNeueCyr-medium";
   color: #333333;
-  margin: 0 0 0 0;
   font-size: 14px;
+  margin: 0;
 }
 .mainInfo_content_cart_payment_block p {
-  max-width: 60%;
+  max-width: 80%;
   font-family: "HelveticaNeueCyr-reg";
   color: #333333;
   font-size: 14px;
@@ -130,17 +123,16 @@
 }
 .mainInfo_content_cart_button {
   justify-content: flex-end;
-  margin: 2rem 0 0 0;
 }
 .mainInfo_content_cart_button_block button {
-  margin: 0 0 1rem 0;
+  border: 1px solid #534e60;
+  padding: 15px 0;
   border-radius: 5px;
   text-decoration: none;
   text-align: center;
   color: #fff;
   font-family: "HelveticaNeueCyr-medium";
   background-color: #534e60;
-  padding: 15px 23px;
   transition: 0.3s;
 }
 .mainInfo_content_cart_button_block button:hover {

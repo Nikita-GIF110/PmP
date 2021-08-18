@@ -21,8 +21,7 @@
   margin-right: 0.9rem;
 }
 .mainDescription_content_filter nav .breadcrumb .breadcrumb-item a {
-  display: flex;
-  width: 126px;
+  white-space: nowrap;
   font-family: "HelveticaNeueCyr-reg";
   font-size: 16px;
   color: #333333;
@@ -48,7 +47,6 @@
   padding: 0 8px;
 }
 .mainDescription_content .cards .catalog_content_block_card {
-  margin-bottom: 2rem;
   text-decoration: none;
   position: relative;
 }
