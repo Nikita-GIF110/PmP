@@ -16,16 +16,19 @@
       <p class="col-4">Информация о какой нибудь акции или любая другая информация</p>
       <a href="#"><img src="img/icon/newsClose.svg" alt="закрыть"></a>
     </div>
-     <div class="mMenu">
-        <div class="mMenu_list">
-          <nav class="mMenu_list_navigation">
-            <a href="about.html">О продукте</a>
-            <a href="catalog.html">Каталог</a>
-            <a href="deleviry.html">Доставка и возврат</a>
-            <a href="contacts.html">Контакты</a>
-          </nav>
-        </div>
+    <div class="mMenu">
+      <div class="mMenu_logo">
+        <img src="img/icon/pmpLogo.svg" alt="">
       </div>
+      <div class="mMenu_list">
+        <nav class="mMenu_list_navigation">
+          <a href="about.html">О продукте</a>
+          <a href="catalog.html">Каталог</a>
+          <a href="deleviry.html">Доставка и возврат</a>
+          <a href="contacts.html">Контакты</a>
+        </nav>
+      </div>
+    </div>
     <header class="header">
       <div class="container-fluid"> 
         <div class="row header_content">
@@ -170,7 +173,7 @@
                     <p class="col-12 col-lg-11">
                       Третьей частью препарата стала группа пептидов, отвечающих за расслабление кожи и разглаживание морщин. От постоянных стрессов, которые встречаются в жизни каждого из нас, наши лица все больше и больше сковывает тревога. Во время применения ПМП-комплекса пептиды расслабляют кожу, а значит способствуют ее омоложению. 
                     </p>
-                    <p class="col-12 col-lg-11">
+                    <p class="col-12 col-lg-11 mb-0">
                       Все вещества, используемые в препаратах Пеперминтпил Майлд и Пеперминтпил Интенс запатентованы, а их действенность научно доказана на практике. Препараты уже активно используют в Европе.
                     </p>
                   </div>
@@ -266,14 +269,14 @@
           <div class="row after_content_top">
             <h2>Результаты применения</h2>
           </div>
-          <div class="row">
-            <div class="col-12 slider">
-              <div class="slider-button">
-                <button type="button" class="btn-prev"><img src="img/icon/arrowLeft.svg" alt=""></button>
-                <button type="button" class="btn-next"><img src="img/icon/arrowRight.svg" alt=""></button>
+          <div class="row slider-wrap">
+            <div class="slider-button">
+                <button type="button" class="btn-prev slider-btnPrev" data-parth="slider-item-after"><img src="img/icon/arrowLeft.svg" alt=""></button>
+                <button type="button" class="btn-next slider-btnNext" data-parth="slider-item-after"><img src="img/icon/arrowRight.svg" alt=""></button>
               </div>
+            <div class="col-12 slider">
               <div class="slider-track">
-                <div class="col-12 slider-track-item">
+                <div class="col-12 slider-track-item" data-target="slider-item-after">
                   <div class="slider-track-item-card">
                     <div class="slider-track-item-card-img">
                       <img src="img/slide1.png" alt="">
@@ -324,10 +327,10 @@
           </div>
          <div class="slider-wrap">
            <div class="slider">
-             <button type="button" class="slider-btnPrev"><img src="img/icon/arrowLeft.svg" alt=""></button>
-             <button type="button" class="slider-btnNext"><img src="img/icon/arrowRight.svg" alt=""></button>
+             <button type="button" class="slider-btnPrev" data-parth="slider-item-catalog"><img src="img/icon/arrowLeft.svg" alt=""></button>
+             <button type="button" class="slider-btnNext" data-parth="slider-item-catalog"><img src="img/icon/arrowRight.svg" alt=""></button>
              <div class="slider-track">
-                <div class="slider-track-item">
+                <div class="slider-track-item" data-target="slider-item-catalog">
                   <a href="cardProduct.html" class="col-12 col-sm-6 col-lg-3 catalog_content_block_card">
                   <button type="button" class="favorites"><img src="img/icon/heart.svg" alt="Добавить в избранное"></button>
                   <div class="mb-3 catalog_content_block_card_img">
@@ -438,22 +441,22 @@
       <div class="container-fluid">
         <div class="row callBack_content">
           <div class="col-lg-5 offset-1 callBack_content_form">
-            <h2 class="mb-5">Связаться с нами</h2>
+            <h2 class="">Связаться с нами</h2>
             <form class="form">
-              <div class="mb-lg-4 form_item">
-                <input type="text" id="userName">
+              <div class="form_item">
+                <input type="text" id="userName" placeholder=" ">
                 <label for="userName">Ваше имя</label>
               </div>
-              <div class="mb-lg-4 form_item">
-                <input type="tel" id="userTel">
+              <div class="form_item">
+                <input type="tel" id="userTel" placeholder=" ">
                 <label for="userTel">Ваш телефон</label>
               </div>
-              <div class="mb-lg-5 form_item">
-                <textarea id="userMessage"></textarea>
+              <div class="form_item">
+                <textarea id="userMessage" placeholder=" "></textarea>
                 <label for="userMessage">Сообщение</label>
               </div>
               <div class="form_item">
-                <button type="button" class="mb-3 button">Отправить</button>
+                <button type="button" class="button">Отправить</button>
                 <p>Нажимая кнопку отправить я принимаю условия <a href="#">Политики конфиденциальности</a></p>
               </div>
             </form>
@@ -503,6 +506,8 @@
       </div>
     </footer>
   </div>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/slider.js"></script>
 </body>
 </html>
 

@@ -21,6 +21,8 @@
   margin-right: 0.9rem;
 }
 .mainDescription_content_filter nav .breadcrumb .breadcrumb-item a {
+  display: inline-block;
+  padding-right: 30px;
   white-space: nowrap;
   font-family: "HelveticaNeueCyr-reg";
   font-size: 16px;
@@ -29,7 +31,8 @@
 }
 .mainDescription_content_filter nav .breadcrumb .breadcrumb-item.active {
   text-align: center;
-  width: 110px;
+  padding: 0;
+  
   font-family: "HelveticaNeueCyr-reg";
   font-size: 16px;
   color: #333333;

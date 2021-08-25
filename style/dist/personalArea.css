@@ -32,6 +32,9 @@
 .personalArea_content_info {
   display: none;
 }
+.personalArea_content_info.active{
+  display: block;
+}
 .personalArea_content_info h5 {
   font-family: "HelveticaNeueCyr-medium";
   font-size: 18px;
@@ -68,14 +71,15 @@
   margin: 0.7rem 0 0 0;
   border-bottom: 1px solid #738793;
 }
-.personalArea_content_info_item label:not(label[for=userNotifications]) {
+.personalArea_content_info_item label {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   color: #738793;
   transition: 0.1s;
 }
-.personalArea_content_info_item input:focus + label:not(label[for=userNotifications]) {
+.personalArea_content_info_item input:focus ~ label,
+.personalArea_content_info_item input:not(:placeholder-shown) ~ label {
   top: 5%;
   transform: scale(0.8);
   transform-origin: left;
@@ -133,7 +137,6 @@
   content: "";
   position: absolute;
   top: 50%;
-  left: 3%;
   transform: translateY(-50%);
   width: 15px;
   height: 15px;
@@ -155,6 +158,9 @@
   visibility: visible;
 }
 .personalArea_content_orders {
+  display: none;
+}
+.personalArea_content_orders.active{
   display: block;
 }
 .personalArea_content_orders_title {
@@ -299,6 +305,9 @@
 .personalArea_content_catalog {
   display: none;
 }
+.personalArea_content_catalog.active{
+  display: block;
+}
 .personalArea_content_catalog h5 {
   color: #333333;
   font-size: 18px;
@@ -311,7 +320,7 @@
 }
 .personalArea_content_catalog .catalog_content_block_card .favorites {
   position: absolute;
-  z-index: 5;
+  z-index: 1;
   top: 0.8rem;
   right: 1.5rem;
   border: none;

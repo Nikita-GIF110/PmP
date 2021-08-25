@@ -125,13 +125,16 @@
   padding-bottom: 150px;
 }
 .after_content_top h2 {
-  font-size: 26px;
   font-family: "Cormorant", serif;
   font-weight: 500;
   color: #333333;
 }
+.after .slider-wrap{
+  position: relative;
+}
 .after_content .slider {
   position: relative;
+  overflow-x: hidden;
 }
 .after_content .slider-button .btn-prev,
 .after_content .slider-button .btn-next {
@@ -144,8 +147,10 @@
   margin-right: 2rem;
 }
 .after_content .slider-track {
+  position: relative;
+  left: 0;
   display: flex;
-  overflow: hidden;
+  transition: 0.2s;
 }
 .after_content .slider-track-item {
   display: flex;

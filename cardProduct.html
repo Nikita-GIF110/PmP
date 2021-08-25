@@ -17,15 +17,18 @@
       <a href="#"><img src="img/icon/newsClose.svg" alt="закрыть"></a>
     </div>
     <div class="mMenu">
-        <div class="mMenu_list">
-          <nav class="mMenu_list_navigation">
-            <a href="about.html">О продукте</a>
-            <a href="catalog.html">Каталог</a>
-            <a href="deleviry.html">Доставка и возврат</a>
-            <a href="contacts.html">Контакты</a>
-          </nav>
-        </div>
+      <div class="mMenu_logo">
+        <img src="img/icon/pmpLogo.svg" alt="">
       </div>
+      <div class="mMenu_list">
+        <nav class="mMenu_list_navigation">
+          <a href="about.html">О продукте</a>
+          <a href="catalog.html">Каталог</a>
+          <a href="deleviry.html">Доставка и возврат</a>
+          <a href="contacts.html">Контакты</a>
+        </nav>
+      </div>
+    </div>
     <header class="header">
       <div class="container"> 
         <div class="row header_content">
@@ -70,19 +73,19 @@
         <div class="row productCard_content">
           <div class="col-12 col-lg-6">
             <div class="slider">
-              <div class="slider_track">
-                <div class="slider_track_item">
+              <div class="slider-track">
+                <div class="slider-track-item" data-target="slider-item">
                   <img src="img/cardProductImg.png" alt="">
                 </div>
-                <div class="slider_track_item">
+                <div class="slider-track-item" data-target="slider-item">
                   <img src="img/cardProductImg.png" alt="">
                 </div>
-                <div class="slider_track_item">
+                <div class="slider-track-item" data-target="slider-item">
                   <img src="img/cardProductImg.png" alt="">
                 </div>
               </div>
-              <button class="slider_button-prev"><img src="img/icon/arrowLeft.svg" alt=""></button>
-              <button class="slider_button-next"><img src="img/icon/arrowRight.svg" alt=""></button>
+              <button class="slider-btnPrev" data-parth="slider-item"><img src="img/icon/arrowLeft.svg" alt=""></button>
+              <button class="slider-btnNext" data-parth="slider-item"><img src="img/icon/arrowRight.svg" alt=""></button>
             </div>
           </div>
           <div class="col-12 col-lg-6">
@@ -134,10 +137,10 @@
           </div>
          <div class="slider-wrap">
            <div class="slider">
-             <button type="button" class="slider-btnPrev"><img src="img/icon/arrowLeft.svg" alt=""></button>
-             <button type="button" class="slider-btnNext"><img src="img/icon/arrowRight.svg" alt=""></button>
+             <button type="button" class="slider-btnPrev" data-parth="slider-item"><img src="img/icon/arrowLeft.svg" alt=""></button>
+             <button type="button" class="slider-btnNext" data-parth="slider-item"><img src="img/icon/arrowRight.svg" alt=""></button>
              <div class="slider-track">
-                <div class="slider-track-item">
+                <div class="slider-track-item" data-target="slider-item">
                   <a href="cardProduct.html" class="col-12 col-sm-6 col-lg-3 catalog_content_block_card">
                   <button type="button" class="favorites"><img src="img/icon/heart.svg" alt="Добавить в избранное"></button>
                   <div class="mb-3 catalog_content_block_card_img">
@@ -331,8 +334,8 @@
         <h2>Регистрация</h2>
         <form class="modalWindow_content_form">
           <div class="modalWindow_content_form_item">
-            <input type="tel" id="userTel">
-            <label for="userTel">Номер телефона</label>
+            <input type="tel" id="userPhone">
+            <label for="userPhone">Номер телефона</label>
           </div>
           <div class="modalWindow_content_form_item">
             <input type="password" placeholder="Пароль">
@@ -358,5 +361,7 @@
     </div>
    </div>
   </div>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/slider.js"></script>
 </body>
 </html>

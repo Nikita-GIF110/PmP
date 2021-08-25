@@ -16,16 +16,19 @@
       <p class="col-4">Информация о какой нибудь акции или любая другая информация</p>
       <a href="#"><img src="img/icon/newsClose.svg" alt="закрыть"></a>
     </div>
-     <div class="mMenu">
-        <div class="mMenu_list">
-          <nav class="mMenu_list_navigation">
-            <a href="about.html">О продукте</a>
-            <a href="catalog.html">Каталог</a>
-            <a href="deleviry.html">Доставка и возврат</a>
-            <a href="contacts.html">Контакты</a>
-          </nav>
-        </div>
+    <div class="mMenu">
+      <div class="mMenu_logo">
+        <img src="img/icon/pmpLogo.svg" alt="">
       </div>
+      <div class="mMenu_list">
+        <nav class="mMenu_list_navigation">
+          <a href="about.html">О продукте</a>
+          <a href="catalog.html">Каталог</a>
+          <a href="deleviry.html">Доставка и возврат</a>
+          <a href="contacts.html">Контакты</a>
+        </nav>
+      </div>
+    </div>
     <header class="header">
       <div class="container"> 
         <div class="row header_content">
@@ -69,22 +72,22 @@
           <div class="row">
             <div class="col-12 col-lg-4 personalArea_content_block">
               <div class="personalArea_content_block_item">
-                <a href="#" class="">Личные данные</a>
+                <a href="#" class="personalArea_content_block_item_button" data-parth="personalArea-info">Личные данные</a>
               </div>
               <div class="personalArea_content_block_item">
-                <a href="#">История заказов</a>
+                <a href="#" class="personalArea_content_block_item_button" data-parth="personalArea-orders">История заказов</a>
               </div>
               <div class="personalArea_content_block_item">
-                <a href="#">Избранное</a>
+                <a href="#" class="personalArea_content_block_item_button" data-parth="personalArea-catalog">Избранное</a>
               </div>
               <div class="personalArea_content_block_item">
-                <a href="#">Вебинары</a>
+                <a href="#" class="personalArea_content_block_item_button">Вебинары</a>
               </div>
               <div class="personalArea_content_block_item">
-                <a href="#" class="exitBtn">Выйти</a>
+                <a href="#" class="exitBtn personalArea_content_block_item_button modalShow" data-parth="exit">Выйти</a>
               </div>
             </div>
-            <div class="col-12 col-sm-8 col-lg-6 offset-lg-1 personalArea_content_info">
+            <div class="col-12 col-sm-8 col-lg-6 offset-lg-1 personalArea_content_info active" data-target="personalArea-info">
               <div class="row mb-0 mb-lg-3">
                 <h5 class="col-12 mb-2 mb-lg-0 col-lg-5">Личная информация</h5>
                 <button class="col-12 col-lg-5 offset-lg-2" type="button">Редактировать данные</button>
@@ -92,25 +95,25 @@
               <div class="row">
                 <div class="row personalArea_content_info_name">
                   <div class="col-12 personalArea_content_info_item">
-                    <input type="text" id="userSurname">
+                    <input type="text" id="userSurname" placeholder=" ">
                     <label for="userSurname">Фамилия</label>
                   </div>
                   <div class="col-12 personalArea_content_info_item">
-                    <input type="text" id="userName">
+                    <input type="text" id="userName" placeholder=" ">
                     <label for="userName">Имя</label>
                   </div>
                   <div class="col-12 personalArea_content_info_item">
-                    <input type="text" id="userPatronymic">
+                    <input type="text" id="userPatronymic" placeholder=" ">
                     <label for="userPatronymic">Отчество</label>
                   </div>
                 </div>
                 <div class="row personalArea_content_info_mail">
                   <div class="col-12 personalArea_content_info_item">
-                    <input type="tel" id="userPhone">
+                    <input type="tel" id="userPhone" placeholder=" ">
                     <label for="userPhone">Телефон</label>
                   </div>
                   <div class="col-12 personalArea_content_info_item">
-                    <input type="email" id="userEmail">
+                    <input type="email" id="userEmail" placeholder=" ">
                     <label for="userEmail">Email</label>
                   </div>
                   <div class="col-12 my-3 wrap-custom-checkbox">
@@ -137,10 +140,10 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-sm-10 col-lg-7 offset-lg-1 personalArea_content_orders">
+            <div class="col-12 col-sm-10 col-lg-7 offset-lg-1 personalArea_content_orders" data-target="personalArea-orders">
               <div class="row p-3">
                 <h5 class="personalArea_content_orders_title">Текущие заказы</h5>
-                <div class="personalArea_content_orders_item active">
+                <div class="personalArea_content_orders_item">
                   <div class="row personalArea_content_orders_item_top">
                     <div class="col-12 col-lg-5 numbe">
                       <h5 class="mb-1">Заказ от 16 июля 2021</h5>
@@ -156,10 +159,10 @@
                   </div>
                   <div class="row personalArea_content_orders_item_description">
                     <div class="row personalArea_content_orders_item_description_top">
-                      <div class="col-12 col-lg-8">
+                      <div class="col-12 col-lg-6">
                         <h5><span>3</span> товара</h5>
                       </div>  
-                      <div class="col-5 col-lg-4 buttonShow">
+                      <div class="col-6 col-lg-6 buttonShow">
                         <a href="#" class="btnShow">Показать подробности</a>
                         <a href="#" class="btnHidde">Скрыть подробности</a>
                       </div>
@@ -217,10 +220,10 @@
                   </div>
                   <div class="row personalArea_content_orders_item_description">
                     <div class="row personalArea_content_orders_item_description_top">
-                      <div class="col-12 col-lg-8">
+                      <div class="col-12 col-lg-6">
                         <h5><span>3</span> товара</h5>
                       </div>  
-                      <div class="col-5 col-lg-4 buttonShow">
+                      <div class="col-6 col-lg-6 buttonShow">
                         <a href="#" class="btnShow">Показать подробности</a>
                         <a href="#" class="btnHidde">Скрыть подробности</a>
                       </div>
@@ -279,10 +282,10 @@
                   </div>
                   <div class="row personalArea_content_orders_item_description">
                     <div class="row personalArea_content_orders_item_description_top">
-                      <div class="col-12 col-lg-8">
+                      <div class="col-12 col-lg-6">
                         <h5><span>3</span> товара</h5>
                       </div>  
-                      <div class="col-5 col-lg-4 buttonShow">
+                      <div class="col-6 col-lg-6 buttonShow">
                         <a href="#" class="btnShow">Показать подробности</a>
                         <a href="#" class="btnHidde">Скрыть подробности</a>
                       </div>
@@ -337,10 +340,10 @@
                   </div>
                   <div class="row personalArea_content_orders_item_description">
                     <div class="row personalArea_content_orders_item_description_top">
-                      <div class="col-12 col-lg-8">
+                      <div class="col-12 col-lg-6">
                         <h5><span>3</span> товара</h5>
                       </div>  
-                      <div class="col-5 col-lg-4 buttonShow">
+                      <div class="col-6 col-lg-6 buttonShow">
                         <a href="#" class="btnShow">Показать подробности</a>
                         <a href="#" class="btnHidde">Скрыть подробности</a>
                       </div>
@@ -384,7 +387,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-12 col-lg-8 personalArea_content_catalog">
+            <div class="col-12 col-lg-8 personalArea_content_catalog" data-target="personalArea-catalog">
               <div class="row">
                 <h5 class="mb-4 mb-lg-5">Избранные товары</h5>
                 <div class="row">
@@ -509,6 +512,56 @@
         </div>
       </div>
     </footer>
+    <div class="windowGroup">
+      <div class="modalWindow" data-target="logIn">
+       <div class="modalWindow_content">
+         <a href="#"><img src="img/icon/close.svg" class="modalClose"></a>
+         <h2>Войти в личный кабинет</h2>
+         <form class="modalWindow_content_form">
+           <div class="modalWindow_content_form_item">
+             <input type="tel" id="userTel">
+             <label for="userTel">Номер телефона</label>
+           </div>
+           <div class="modalWindow_content_form_item">
+             <input type="password" placeholder="Пароль">
+           </div>
+           <button>Войти</button>
+         </form>
+         <p>Нет аккаунта? <a href="#">Зарегистрироваться</a></p>
+       </div>
+     </div>
+     <div class="modalWindow" data-target="entrance">
+       <div class="modalWindow_content">
+         <a href="#"><img src="img/icon/close.svg" class="modalClose"></a>
+         <h2>Регистрация</h2>
+         <form class="modalWindow_content_form">
+           <div class="modalWindow_content_form_item">
+             <input type="tel" id="phone">
+             <label for="phone">Номер телефона</label>
+           </div>
+           <div class="modalWindow_content_form_item">
+             <input type="password" placeholder="Пароль">
+           </div>
+           <div class="modalWindow_content_form_item">
+             <input type="password" placeholder="Повторите пароль">
+           </div>
+           <button class="entranceBtn">Зарегистрироваться</button>
+         </form>
+         <p>Уже зарегистрированы? <a href="#">Войти</a></p> 
+       </div>
+     </div>
+     <div class="modalWindow" data-target="exit">
+       <div class="modalWindow_content">
+        <a href="#" class="modalClose"><img src="img/icon/close.svg"></a>
+         <h2>Вы уверены что хотите выйти?</h2>
+         <div class="modalWindow_content_btn">
+           <button type="button" class="exitBtn">Отмена</button>
+           <button type="button" class="exitBtn">Выйти</button>
+         </div>
+       </div>
+     </div>
+     </div>
   </div>
+  <script src="scripts/main.js"></script>
 </body>
 </html>
