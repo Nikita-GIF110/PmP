@@ -28,14 +28,15 @@
   font-size: 16px;
   color: #333333;
   border-right: 1px solid #333333;
+  cursor: pointer;
 }
 .mainDescription_content_filter nav .breadcrumb .breadcrumb-item.active {
   text-align: center;
   padding: 0;
-  
   font-family: "HelveticaNeueCyr-reg";
   font-size: 16px;
   color: #333333;
+  cursor: pointer;
 }
 .mainDescription_content_filter button {
   font-family: "HelveticaNeueCyr-medium";
@@ -67,6 +68,21 @@
   justify-content: center;
   align-items: center;
   background-color: #e6eae7;
+}
+.mainDescription_content .cards .catalog_content_block_card_favorites {
+  width: 13px;
+  height: 12px;
+  position: absolute;
+  top: 17px;
+  right: 17px;
+  background-image: url('../../img/icon/heart.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 0.2s;
+}
+.mainDescription_content .cards .catalog_content_block_card_favorites:hover{
+  background-image: url('../../img/icon/greyHeart.svg');
 }
 .mainDescription_content .cards .catalog_content_block_card_img img {
   max-width: 100%;

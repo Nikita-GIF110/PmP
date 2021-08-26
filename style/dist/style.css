@@ -275,13 +275,17 @@
   margin: 0;
   text-align: center;
 }
-.stockInfo img {
+.stockInfo a {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   right: 17px;
   width: 10px;
   height: 10px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .breadcrumb .breadcrumb-list {
@@ -411,6 +415,10 @@
   width: 20px;
   height: 20px;
   cursor: pointer;
+  overflow: hidden;
+}
+.header_content_user_block .mMenu_btn.active span{
+  width: 0;
 }
 .header_content_user_block .mMenu_btn span {
   position: relative;
@@ -418,6 +426,7 @@
   height: 1.5px;
   display: block;
   background-color: #8f8f8f;
+  transition: 0.2s;
 }
 .header_content_user_block .mMenu_btn span::before,
 .header_content_user_block .mMenu_btn span::after {
@@ -428,12 +437,24 @@
   width: 20px;
   height: 1.5px;
   background-color: #8f8f8f;
+  transform-origin: center;
+  transition: 0.2s;
 }
 .header_content_user_block .mMenu_btn span::before {
   top: 7px;
 }
 .header_content_user_block .mMenu_btn span::after {
   bottom: 7px;
+}
+.header_content_user_block .mMenu_btn.active span::before {
+  top: 0;
+  transform: rotate(-45deg);
+  transition-delay: 0.2s;
+}
+.header_content_user_block .mMenu_btn.active span::after {
+  bottom: 0;
+  transform: rotate(45deg);
+  transition-delay: 0.2s;
 }
 .header_content_user_block a {
   border: none;
@@ -576,12 +597,20 @@
 .catalog_content .slider-wrap .slider-track-item .catalog_content_block_card {
   text-decoration: none;
 }
-.catalog_content .slider-wrap .slider-track-item .catalog_content_block_card .favorites {
+.catalog_content .slider-wrap .slider-track-item .catalog_content_block_card_favorites {
+  width: 13px;
+  height: 12px;
   position: absolute;
-  top: 0.8rem;
-  right: 0.8rem;
-  border: none;
-  background-color: transparent;
+  top: 17px;
+  right: 17px;
+  background-image: url('../../img/icon/heart.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 0.2s;
+}
+.catalog_content .slider-wrap .slider-track-item .catalog_content_block_card_favorites:hover{
+  background-image: url('../../img/icon/greyHeart.svg');
 }
 .catalog_content .slider-wrap .slider-track-item .catalog_content_block_card_img {
   padding: 100px 28px;

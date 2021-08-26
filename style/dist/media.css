@@ -289,10 +289,10 @@
   }
   .slider-track-item {
     width: 50%;
-    margin-right: 1%;
+    margin-right: 30px;
   }
   .slider-track-item-card img {
-    max-width: 100%;
+    width: 100%;
     height: 100%;
   }
   .slider-track-item-card-description p{
@@ -422,7 +422,7 @@
     z-index: -1;
     top: 50%;
     transform: translateY(-50%);
-    right: -30%;
+    right: 20%;
     visibility: hidden;
   }
   .mainInfo_content_cart_info:hover button {
@@ -635,6 +635,15 @@
   .breadcrumb{
     white-space: nowrap;
     margin-bottom: 50px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .breadcrumb::-webkit-scrollbar { 
+    width: 0;
+    height: 0;
   }
   .breadcrumb .breadcrumb-list .breadcrumb-item a{
     font-size: 14px;
@@ -696,21 +705,22 @@
   }
   .header_content_user {
     margin-right: 0;
+    align-items: flex-start;
   }
   .header_content_user_block .mMenu_btn {
     display: flex;
   }
   .header_content_user input {
-    max-width: 4rem;
+    max-width: 7rem;
   }
   .header_content_user_block a{
     margin-right: 20px;
   }
   .header_content_user_search{
-    margin-right: 20px;
+    margin-right: 10px;
   }
   .header_content_user_search:hover{
-    transform: translateX(80%);
+    transform: translateX(50%);
   }
   .header_content_user_search:hover + .header_content_user_block a{
     visibility: hidden;
@@ -938,7 +948,7 @@
   }
 
   .mainDescription{
-    padding: 30px 0 90px 0;
+    padding: 30px 0 0 0;
   }
   .mainDescription_content h2{
     font-size: 26px;
@@ -1279,26 +1289,36 @@
     display: flex;
     flex-wrap: nowrap;
     margin-bottom: 70px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .personalArea_content_block::-webkit-scrollbar { 
+    width: 0;
+    height: 0;
   }
   .personalArea_content_block_item {
     border: none;
-    padding: 0;
+    border-radius: 4px;
+    padding: 10px 20px;
   }
   .personalArea_content_block_item:first-child{
     border: none;
   }
-  .personalArea_content_block_item:nth-child(odd) a {
+  .personalArea_content_block_item:nth-child(odd) {
     background-color: #534e60;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
   }
-  .personalArea_content_block_item:nth-child(even) a {
+  .personalArea_content_block_item:nth-child(odd) a{
+    color: #fff;
+  }
+  .personalArea_content_block_item:nth-child(even) {
     background-color: transparent;
-    color: #333;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
     border: 1px solid #534e60;
+  }
+  .personalArea_content_block_item:nth-child(even) a{
+    color: #333;
   }
   .personalArea_content_info label:not(label[for=userNotifications]) {
     left: 3%;
