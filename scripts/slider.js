@@ -1,3 +1,4 @@
+/*
 document.addEventListener('DOMContentLoaded', function() {
 
     const sliderTrack = document.querySelectorAll('.slider-track');
@@ -35,3 +36,4 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
 })
+*/

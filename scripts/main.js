@@ -1,10 +1,26 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+    const stockInfoClose = document.querySelector('.stockInfo a');
+    const stockInfo = document.querySelector('.stockInfo');
+    
+    stockInfoClose.addEventListener('click', function(e) {
+        e.preventDefault();
+        stockInfo.style.display = "none";
+    })
+
     const burgerBtn = document.querySelector('.mMenu_btn');
     const mMenu = document.querySelector('.mMenu');
+    const body = document.querySelector('body');
 
     burgerBtn.addEventListener('click', function() {
+        this.classList.toggle('active');
         mMenu.classList.toggle('active');
+        if(burgerBtn.classList.contains('active')){
+            body.style.overflow = "hidden";
+        }else{
+            body.style.overflow = "auto";
+        }
+        
     });
 
     const modalBtns = document.querySelectorAll(".modalShow");
@@ -66,5 +82,22 @@ document.addEventListener('DOMContentLoaded', function() {
             blockItem[i].classList.remove('active')
         })
     }
+    
+    const inNum = document.querySelector('.in-num');
+    const minus = document.querySelector('.minus');
+    const plus = document.querySelector('.plus'); 
+
+    if(inNum){
+        minus.addEventListener('click', function() {
+            inNum.value--;
+            if(inNum.value <= 0){
+                inNum.value = 0; 
+            }
+        });
+        plus.addEventListener('click', function() {
+            inNum.value++;
+        });
+    };
+
     
 });
