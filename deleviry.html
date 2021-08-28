@@ -30,7 +30,7 @@
       </div>
     </div>
     <header class="header">
-      <div class="container"> 
+      <div class="container-fluid"> 
         <div class="row header_content">
           <div class="col-1 header_content_logo">
             <a href="index.html"><img src="img/icon/pmpLogo.svg" alt="ПМП - Терапия"></a>
@@ -58,7 +58,7 @@
       </div>    
     </header>
     <div class="deliveryMain">
-      <div class="container">
+      <div class="container-fluid">
         <div class="deliveryMain_content">
            <nav class="breadcrumb">
               <ol class="breadcrumb-list">
@@ -157,6 +157,56 @@
         </div>
       </div>
     </footer>
+    <div class="windowGroup">
+      <div class="modalWindow" data-target="logIn">
+       <div class="modalWindow_content">
+         <a href="#"><img src="img/icon/close.svg" class="modalClose"></a>
+         <h2>Войти в личный кабинет</h2>
+         <form class="modalWindow_content_form">
+           <div class="modalWindow_content_form_item">
+             <input type="tel" id="userTel">
+             <label for="userTel">Номер телефона</label>
+           </div>
+           <div class="modalWindow_content_form_item">
+             <input type="password" placeholder="Пароль">
+           </div>
+           <button>Войти</button>
+         </form>
+         <p>Нет аккаунта? <a href="#">Зарегистрироваться</a></p>
+       </div>
+     </div>
+     <div class="modalWindow" data-target="entrance">
+       <div class="modalWindow_content">
+         <a href="#"><img src="img/icon/close.svg" class="modalClose"></a>
+         <h2>Регистрация</h2>
+         <form class="modalWindow_content_form">
+           <div class="modalWindow_content_form_item">
+             <input type="tel" id="phone">
+             <label for="phone">Номер телефона</label>
+           </div>
+           <div class="modalWindow_content_form_item">
+             <input type="password" placeholder="Пароль">
+           </div>
+           <div class="modalWindow_content_form_item">
+             <input type="password" placeholder="Повторите пароль">
+           </div>
+           <button class="entranceBtn">Зарегистрироваться</button>
+         </form>
+         <p>Уже зарегистрированы? <a href="#">Войти</a></p> 
+       </div>
+     </div>
+     <div class="modalWindow" data-target="exit">
+       <div class="modalWindow_content">
+        <a href="#" class="modalClose"><img src="img/icon/close.svg"></a>
+         <h2>Вы уверены что хотите выйти?</h2>
+         <div class="modalWindow_content_btn">
+           <button type="button" class="exitBtn">Отмена</button>
+           <button type="button" class="exitBtn">Выйти</button>
+         </div>
+       </div>
+     </div>
+    </div>
   </div>
+  <script src="scripts/main.js"></script>
 </body>
 </html>

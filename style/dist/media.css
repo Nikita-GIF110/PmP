@@ -287,10 +287,6 @@
     background-color: transparent;
     outline: none;
   }
-  .slider-track-item {
-    width: 50%;
-    margin-right: 30px;
-  }
   .slider-track-item-card img {
     width: 100%;
     height: 100%;
@@ -324,8 +320,30 @@
   .productInfo_content_description a {
     margin-top: 70px;
   }
-  .after_content .slider-track-item-card-img {
+  .after_content .swiper-slide-img {
     margin-bottom: 30px;
+  }
+  .after_content .swiper-slide-img img {
+    width: 100%;
+    height: auto;
+  }
+  .after_content .afterSlider-buttons{
+    position: relative;
+    margin-bottom: 30px;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+  }
+  .after_content .afterSlider-buttons .afterSlider-btn{
+    margin: 0;
+  }
+  .after_content .afterSlider-buttons .afterSlider-btn-prev {
+    margin-right: 30px;
+  }
+  .after_content .swiper-slide-description p{
+    width: 80%;
+  }
+  .after_content .swiper-slide-description p {
+    width: 80%;
   }
   .aboutProduct_content .aboutProduct_content_title{
     font-size: 36px;
@@ -465,13 +483,14 @@
     font-size: 9px;
   }
   .personalArea_content_info .wrap-custom-checkbox label::before {
-    top: 50%;
-    left: -6%;
+    top: 45%;
+    left: 18px;
     transform: translateY(-50%);
   }
   .personalArea_content_info .wrap-custom-checkbox::before {
-    top: 10px;
-    left: 2%;
+    top: 45%;
+    transform: translateY(-50%);
+    left: 14px;
   }
   .personalArea_content_catalog .more {
     display: none;
@@ -777,7 +796,7 @@
    align-items: center; 
    margin-bottom: 40px;
   }
-  .catalog .slider button{
+  .catalog .sliderCatalog button{
     display: none;
   }
 
@@ -1049,29 +1068,6 @@
     font-size: 26px;
   }
 
-  .slider {
-    position: relative;
-  }
-  .slider-button {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    margin-bottom: 0%;
-    bottom: -15%;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .slider-track-item {
-    width: 100%;
-  }
-  .slider-track-item-card {
-    width: 100%;
-    margin: 0;
-  }
-  .slider-track-item-card img {
-    width: 100%;
-    height: 100%;
-  }
   .productInfo {
     padding: 70px 0 70px 0;
   }
@@ -1095,8 +1091,25 @@
   .productInfo_content_description .buyTitle {
     margin-bottom: 20px;
   }
-  .after_content .slider-track-item-card-img {
+  .after_content .afterSlider-buttons{
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    justify-content: center;
+    bottom: -60px;
+    margin-bottom: 0;
+  }
+  .after_content .afterSlider-buttons .afterSlider-btn{
+    margin: 0 25px;
+  }
+  .after_content .swiper-slide-img {
     margin-bottom: 20px;
+  }
+  .after_content .swiper-slide-img img{
+    width: 100%;
+  }
+  .after_content .swiper-slide-description p{
+    width: 100%;
   }
   .productInfo_content .imgMobile1 {
     position: relative;
@@ -1332,14 +1345,6 @@
   .personalArea_content_info .removeBtn {
     position: relative;
   }
-  .personalArea_content_info .wrap-custom-checkbox label::before {
-    top: 46%;
-    left: -6%;
-  }
-  .personalArea_content_info .wrap-custom-checkbox::before {
-    top: 10px;
-    left: 3%;
-  }
   .personalArea_content_orders_title {
     padding: 0 0 1.5rem 0;
   }
@@ -1390,7 +1395,7 @@
   .productCard {
     padding: 0 0 90px 0;
   }
-  .productCard_content .slider {
+  .productCard_content .productCardSlider {
     margin-bottom: 140px;
   }
   .productCard_content_text_top {
@@ -1411,19 +1416,10 @@
   .container-fluid {
     padding: 0 25px;
   }
-  .personalArea_content_info .wrap-custom-checkbox label::before {
-    top: 23%;
-    left: -7.7%;
-  }
 }
 @media screen and (max-width: 580px) {
   .container-fluid {
     padding: 0 15px;
-  }
-
-  .personalArea_content_info .wrap-custom-checkbox label::before {
-    top: 46%;
-    left: -5.5%;
   }
 }
 @media screen and (max-width: 460px) {
@@ -1431,16 +1427,18 @@
     width: 100%;
     padding: 0;
   }
-  .personalArea_content_info .wrap-custom-checkbox label::before {
-    top: 47%;
-    left: -6.5%;
+}
+@media screen and (max-width: 400px) {
+  .personalArea_content_info .wrap-custom-checkbox::before{
+    top: 25%;
+    left: 12px;
+  }
+  .personalArea_content_info .wrap-custom-checkbox label::before{
+    top: 25%;
+    left: 16px;
   }
 }
 @media  screen and (max-width: 376px) {
-  .personalArea_content_info .wrap-custom-checkbox label::before {
-    top: 25%;
-    left: -8%;
-  }
   .mainDescription_content .cards{
     justify-content: center;
   }

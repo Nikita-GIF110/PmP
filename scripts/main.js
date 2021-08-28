@@ -29,9 +29,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     for(let i = 0; i < modalBtns.length; i++) {
         modalBtns[i].addEventListener('click', function(e) {
+            console.log(modalBtns[i]);
             let parth = modalBtns[i].getAttribute('data-parth');
+            console.log(parth);
             let modal = document.querySelectorAll(`[data-target="${parth}"]`);
-            console.log(modal);
             for(let i = 0; i < modal.length; i++){
                 modal[i].classList.add('active');
             }
@@ -39,10 +40,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }); 
     }
     for(let i = 0; i < modalClose.length; i++) {
-        modalClose[i].addEventListener('click', function() {
+        modalClose[i].addEventListener('click', function(e) {
             for(let i = 0; i < modalOverlay.length; i++){
                 modalOverlay[i].classList.remove('active');
             }
+            e.preventDefault();
         })
     }
     for(let i = 0; i < modalOverlay.length; i++) {
@@ -53,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
     
-    const tabButton = document.querySelectorAll('.personalArea_content_block_item_button');
+    const tabButton = document.querySelectorAll('.blockBtn');
     tabButton.forEach(function(item){
         let currentBtn = item;
         currentBtn.addEventListener('click', function(){
@@ -99,5 +101,79 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     };
 
+    if(document.querySelector('.sliderCatalog')){
+        new Swiper ('.sliderCatalog', {
+            navigation: {
+                prevEl: '.slider-btnPrev',
+                nextEl: '.slider-btnNext'
+            },
+    
+            slidesPerView: 4.5,
+            spaceBetween: 40,
+            slidesPerGroup: 1,
+            freeMode: true,
+            breakpoints: {
+                300: {
+                    slidesPerView: 'auto'
+                },
+                768: {
+                    slidesPerView: 'auto'
+                },
+                1024: {
+                    slidesPerView: 'auto'
+                }
+            }
+        });
+    }
+
+    if(document.querySelector('.productCardSlider')){
+        new Swiper ('.productCardSlider', {
+            navigation: {
+                prevEl: '.productCardSlider-btn-prev',
+                nextEl: '.productCardSlider-btn-next'
+            },
+    
+            slidesPerView: 1,
+            loop: true,
+            slidesPerGroup: 1,
+            freeMode: false,
+            breakpoints: {
+                300: {
+                    slidesPerView: 'auto'
+                },
+                768: {
+                    slidesPerView: 'auto'
+                },
+                1024: {
+                    slidesPerView: 'auto'
+                }
+            }
+        });
+    }
+
+    if(document.querySelector('.afterSlider')){
+        new Swiper ('.afterSlider', {
+            navigation: {
+                prevEl: '.afterSlider-btn-prev',
+                nextEl: '.afterSlider-btn-next'
+            },
+            slidesPerGroup: 1,
+            freeMode: false,
+            breakpoints: {
+                300: {
+                    slidesPerView: 'auto'
+                },
+                992: {
+                    slidesPerView: 'auto',
+                    slidesPerView: 1,
+                    spaceBetween: 0
+                },
+                1024: {
+                    slidesPerView: 2,
+                    spaceBetween: 30
+                }
+            }
+        });
+    }
     
 });

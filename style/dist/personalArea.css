@@ -117,10 +117,10 @@
   visibility: hidden;
 }
 .personalArea_content_info .wrap-custom-checkbox label {
-  transform: translateX(4%);
   color: #333333;
   font-size: 14px;
   font-family: "HelveticaNeueCyr-reg";
+  margin-left: 10px;
 }
 .personalArea_content_info .wrap-custom-checkbox label::before {
   content: "";
@@ -136,8 +136,6 @@
 .personalArea_content_info .wrap-custom-checkbox::before {
   content: "";
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   width: 15px;
   height: 15px;
   border: 1px solid #959595;

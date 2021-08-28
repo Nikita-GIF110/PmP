@@ -124,41 +124,21 @@
   background-color: #f4f4f2;
   padding-bottom: 150px;
 }
+.after_content{
+  position: relative;
+}
 .after_content_top h2 {
   font-family: "Cormorant", serif;
   font-weight: 500;
   color: #333333;
 }
-.after .slider-wrap{
-  position: relative;
-}
-.after_content .slider {
-  position: relative;
-  overflow-x: hidden;
-}
-.after_content .slider-button .btn-prev,
-.after_content .slider-button .btn-next {
-  border: none;
-  background-color: transparent;
-  outline: none;
-  padding: 0;
-}
-.after_content .slider-button .btn-prev {
-  margin-right: 2rem;
-}
-.after_content .slider-track {
-  position: relative;
-  left: 0;
-  display: flex;
-  transition: 0.2s;
-}
-.after_content .slider-track-item {
+.after_content .afterSlider-buttons{
   display: flex;
 }
-.after_content .slider-track-item-card-img img {
+.after_content .swiper-slide-img img {
   object-fit: cover;
 }
-.after_content .slider-track-item-card-description p {
+.after_content .swiper-slide-description p {
   color: #333333;
   font-family: "HelveticaNeueCyr-reg";
   font-size: 16px;

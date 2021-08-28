@@ -564,6 +564,13 @@
 .catalog_content .slider-wrap .slider {
   position: relative;
 }
+.catalog_content .swiper{
+  overflow: visible;
+  width: 100%;
+}
+.catalog_content .swiper-slide{
+  max-width: 320px;
+}
 .catalog_content .slider-wrap .slider-btnPrev, .catalog_content .slider-wrap .slider-btnNext {
   position: absolute;
   z-index: 5;
@@ -590,14 +597,11 @@
   left: 0;
   transition: 0.2s;
 }
-.catalog_content .slider-wrap .slider-track-item {
-  margin-right: 1.3rem;
+.catalog_content .slider-wrap .slider-track .catalog_content_block_card {
+  text-decoration: none;
   position: relative;
 }
-.catalog_content .slider-wrap .slider-track-item .catalog_content_block_card {
-  text-decoration: none;
-}
-.catalog_content .slider-wrap .slider-track-item .catalog_content_block_card_favorites {
+.catalog_content .slider-wrap .slider-track .catalog_content_block_card_favorites {
   width: 13px;
   height: 12px;
   position: absolute;
@@ -609,33 +613,38 @@
   background-size: cover;
   transition: 0.2s;
 }
-.catalog_content .slider-wrap .slider-track-item .catalog_content_block_card_favorites:hover{
+.catalog_content .slider-wrap .slider-track .catalog_content_block_card_favorites:hover{
   background-image: url('../../img/icon/greyHeart.svg');
 }
-.catalog_content .slider-wrap .slider-track-item .catalog_content_block_card_img {
-  padding: 100px 28px;
+.catalog_content .slider-wrap .slider-track .catalog_content_block_card_img {
+  padding: 100px 0;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #e6eae7;
 }
-.catalog_content .slider-wrap .slider-track-item .catalog_content_block_card_description h4 {
+.catalog_content .slider-wrap .slider-track .catalog_content_block_card_img img{
+  max-width: 265px;
+  height: 205px;
+  object-fit: cover;
+}
+.catalog_content .slider-wrap .slider-track .catalog_content_block_card_description h4 {
   font-family: "HelveticaNeueCyr-medium";
   font-size: 16px;
   color: #333333;
   font-weight: 550;
 }
-.catalog_content .slider-wrap .slider-track-item .catalog_content_block_card_description p {
+.catalog_content .slider-wrap .slider-track .catalog_content_block_card_description p {
   font-family: "HelveticaNeueCyr-medium";
   color: #7c7c7c;
   font-size: 14px;
 }
-.catalog_content .slider-wrap .slider-track-item .catalog_content_block_card_description .price {
+.catalog_content .slider-wrap .slider-track .catalog_content_block_card_description .price {
   font-family: "HelveticaNeueCyr-medium";
   color: #333333;
   font-size: 18px;
 }
-.catalog_content .slider-wrap .slider-track-item .catalog_content_block_card_description button {
+.catalog_content .slider-wrap .slider-track .catalog_content_block_card_description button {
   background-color: transparent;
   padding: 16px 0;
   display: flex;
@@ -1046,3 +1055,5 @@
   width: 14px;
   height: 14px;
 }
+
+
