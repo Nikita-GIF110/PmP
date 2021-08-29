@@ -259,7 +259,8 @@
   color: #333333;
   margin-right: 2rem;
 }
-.personalArea_content_orders_item_description_top .buttonShow::before {
+.personalArea_content_orders_item_description_top .buttonShow::before,
+.personalArea_content_orders_item_description_top .buttonShow::before  {
   content: "";
   position: absolute;
   top: 50%;
@@ -269,6 +270,7 @@
   width: 8px;
   height: 4px;
   transition: 0.3s;
+  pointer-events: none;
 }
 .personalArea_content_orders_item_description_group {
   display: none;
@@ -288,10 +290,10 @@
   font-weight: 550;
   color: #333333;
 }
-.personalArea_content_orders_item.active a.btnShow {
+.personalArea_content_orders_item.active .btnShow {
   display: none;
 }
-.personalArea_content_orders_item.active a.btnHidde {
+.personalArea_content_orders_item.active .btnHidde {
   display: block;
 }
 .personalArea_content_orders_item.active .buttonShow::before {

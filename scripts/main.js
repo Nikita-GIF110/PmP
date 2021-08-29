@@ -72,18 +72,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const btnHidde = document.querySelectorAll('.btnHidde');
     const blockItem = document.querySelectorAll('.personalArea_content_orders_item');
 
-    for(let i = 0; i < btnShow.length; i++){
-        btnShow[i].addEventListener('click', function(e) {
+    for(let i = 0; i < blockItem.length; i++){
+        blockItem[i].addEventListener('click', function(e) {
             e.preventDefault();
-            blockItem[i].classList.add('active')
+            blockItem[i].classList.toggle('active')
         })
     }
-    for(let i = 0; i < btnHidde.length; i++){
-        btnHidde[i].addEventListener('click', function(e) {
-            e.preventDefault();
-            blockItem[i].classList.remove('active')
-        })
-    }
+    // for(let i = 0; i < blockItem.length; i++){
+    //     blockItem[i].addEventListener('click', function(e) {
+    //         // e.preventDefault();
+    //         blockItem[i].classList.remove('active')
+    //     })
+    // }
     
     const inNum = document.querySelector('.in-num');
     const minus = document.querySelector('.minus');
