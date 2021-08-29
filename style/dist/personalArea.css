@@ -258,6 +258,8 @@
   font-size: 14px;
   color: #333333;
   margin-right: 2rem;
+  width: 100%;
+  display: flex;
 }
 .personalArea_content_orders_item_description_top .buttonShow::before,
 .personalArea_content_orders_item_description_top .buttonShow::before  {
