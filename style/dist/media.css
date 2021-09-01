@@ -724,7 +724,7 @@
   }
   .header_content_user {
     margin-right: 0;
-    align-items: center
+    align-items: flex-start;
   }
   .header_content_user_block .mMenu_btn {
     display: flex;
